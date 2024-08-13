@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Code samples for the book Node.js Design Patterns, 4th Edition by Mario Casciaro and Luciano Mammino",
   "scripts": {
+    "test": "pnpm run test:lint",
     "test:lint": "biome check --no-errors-on-unmatched",
     "test:lint-fix": "biome check --write --no-errors-on-unmatched",
     "prepare": "husky"
