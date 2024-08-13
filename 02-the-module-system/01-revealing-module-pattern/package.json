@@ -1,0 +1,17 @@
+{
+  "name": "01-revealing-module-pattern",
+  "version": "1.0.0",
+  "description": "This example demonstrates the revealing module pattern.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
