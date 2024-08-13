@@ -4,9 +4,7 @@
   "description": "This example demonstrates the revealing module pattern.",
   "main": "index.js",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "engines": {
     "node": ">=22"
   },
