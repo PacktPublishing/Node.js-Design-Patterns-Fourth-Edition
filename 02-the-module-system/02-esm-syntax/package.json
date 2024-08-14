@@ -1,0 +1,15 @@
+{
+  "name": "02-esm-syntax",
+  "version": "1.0.0",
+  "description": "These examples showcase ESM syntax.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
