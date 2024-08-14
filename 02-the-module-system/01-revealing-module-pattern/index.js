@@ -10,7 +10,7 @@ const myModule = (() => {
   }
 
   return exported
-})() // once the parenthesis here are parsed, the function will be invoked
+})() // once the parenthesis here are parsed, the function will be invoked and the returned value assigned to myModule
 
 console.log('Outside:', myModule.privateFoo, myModule.privateBar)
 console.log('Module:', myModule)
