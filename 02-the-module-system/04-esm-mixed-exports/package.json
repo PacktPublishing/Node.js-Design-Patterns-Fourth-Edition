@@ -1,7 +1,7 @@
 {
-  "name": "01-revealing-module-pattern",
+  "name": "04-esm-mixed-exports",
   "version": "1.0.0",
-  "description": "This example demonstrates the revealing module pattern.",
+  "description": "demonstrates a mixed syntax with named and default import/export",
   "type": "module",
   "scripts": {},
   "engines": {

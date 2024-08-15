@@ -1,17 +1,14 @@
 {
   "name": "03-esm-default",
   "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "description": "demonstrates the default import/export syntax of ESM modules",
   "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {},
   "engines": {
-    "node": ">=14"
+    "node": ">=22"
   },
-  "engineStrict": true
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
 }

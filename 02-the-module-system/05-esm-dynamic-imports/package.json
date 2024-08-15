@@ -1,7 +1,7 @@
 {
-  "name": "01-revealing-module-pattern",
+  "name": "05-esm-dynamic-imports",
   "version": "1.0.0",
-  "description": "This example demonstrates the revealing module pattern.",
+  "description": "demonstrates how to load modules dynamically with ESM",
   "type": "module",
   "scripts": {},
   "engines": {
