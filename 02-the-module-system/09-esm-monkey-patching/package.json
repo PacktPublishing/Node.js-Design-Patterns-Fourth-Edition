@@ -1,0 +1,15 @@
+{
+  "name": "09-esm-monkey-patching",
+  "version": "1.0.0",
+  "description": "This sample demonstrates monkey-patching of modules in ESM",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

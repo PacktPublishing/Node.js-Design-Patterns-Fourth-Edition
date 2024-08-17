@@ -1,0 +1,15 @@
+{
+  "name": "08-esm-circular-dependencies",
+  "version": "1.0.0",
+  "description": "demonstrates how circular dependencies are handled by ESM",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
