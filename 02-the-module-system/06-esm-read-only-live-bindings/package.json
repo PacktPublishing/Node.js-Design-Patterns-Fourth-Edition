@@ -1,0 +1,14 @@
+{
+  "name": "06-esm-read-only-live-bindings",
+  "version": "1.0.0",
+  "description": "This sample demonstrates that imported ESM modules are read-only live bindings",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
