@@ -12,3 +12,10 @@ export const logger = {
     console.log(`[DEBUG]\t${message}`)
   },
 }
+
+const module = {
+  logger,
+}
+
+// biome-ignore lint/style/noDefaultExport: useful for monkey patching
+export default module
