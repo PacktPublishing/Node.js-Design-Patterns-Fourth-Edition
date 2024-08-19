@@ -1,0 +1,15 @@
+{
+  "name": "11-top-level-await",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use top-level await in ESM and the alternative way to use await in CommonJS.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

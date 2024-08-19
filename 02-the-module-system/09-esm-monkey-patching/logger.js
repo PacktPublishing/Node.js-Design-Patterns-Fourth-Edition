@@ -13,9 +13,7 @@ export const logger = {
   },
 }
 
-const module = {
+// biome-ignore lint/style/noDefaultExport: useful for monkey patching
+export default {
   logger,
 }
-
-// biome-ignore lint/style/noDefaultExport: useful for monkey patching
-export default module

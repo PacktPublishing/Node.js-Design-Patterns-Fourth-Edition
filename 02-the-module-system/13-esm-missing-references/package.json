@@ -1,0 +1,15 @@
+{
+  "name": "11-esm-missing-references",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to handle missing references in ESM (as opposed to CJS)",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
