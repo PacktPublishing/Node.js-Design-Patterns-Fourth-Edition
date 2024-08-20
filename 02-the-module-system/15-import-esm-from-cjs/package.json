@@ -1,0 +1,15 @@
+{
+  "name": "15-import-esm-from-cjs",
+  "version": "1.0.0",
+  "description": "This sample demonstrates different ways to import ES modules from CommonJS.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
