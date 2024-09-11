@@ -1,0 +1,14 @@
+{
+  "name": "01-sync-cps",
+  "version": "1.0.0",
+  "description": "This example demonstrates continuous passing with callbacks.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

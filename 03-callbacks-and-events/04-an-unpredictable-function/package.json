@@ -1,0 +1,14 @@
+{
+  "name": "04-an-unpredictable-function",
+  "version": "1.0.0",
+  "description": "This example demonstrates how a function can behave synchronously under certain circumstances and asynchronously under others",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
