@@ -1,0 +1,14 @@
+{
+  "name": "08-scheduling-callbacks-methods",
+  "version": "1.0.0",
+  "description": "This example shows how the event loop priorities callbacks scheduled with `setImmediate(cb)`, `setTimeout(cb, 0)` and `process.nextTick(cb)`",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

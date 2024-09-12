@@ -1,0 +1,14 @@
+{
+  "name": "05-fix-zalgo-with-sync-api",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to fix Zalgo by making our unpredictable function synchronous",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

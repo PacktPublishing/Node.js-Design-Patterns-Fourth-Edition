@@ -1,0 +1,14 @@
+{
+  "name": "06-deferred-execution",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to fix Zalgo by deferring any synchronous callback invocation.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

@@ -1,0 +1,14 @@
+{
+  "name": "07-io-starvation",
+  "version": "1.0.0",
+  "description": "This example demonstrates how you can starve the event loop by constantly scheduling tasks with `process.nextTick()`",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
