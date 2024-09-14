@@ -1,0 +1,14 @@
+{
+  "name": "13-eventemitter-sync-emit",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to handle events when they are produced synchronously",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

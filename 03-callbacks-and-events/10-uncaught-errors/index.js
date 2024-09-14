@@ -20,11 +20,11 @@ try {
 }
 
 // Our last chance to intercept any uncaught error
-// process.on('uncaughtException', err => {
-//   console.error(
-//     `This will catch at last the JSON parsing exception: ${err.message}`
-//   )
-//   // Terminates the application with 1 (error) as exit code.
-//   // Without the following line, the application would continue
-//   process.exit(1)
-// })
+process.on('uncaughtException', err => {
+  console.error(
+    `This will catch at last the JSON parsing exception: ${err.message}`
+  )
+  // Terminates the application with 1 (error) as exit code.
+  // Without the following line, the application would continue
+  process.exit(1)
+})

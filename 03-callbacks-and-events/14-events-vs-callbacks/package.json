@@ -1,0 +1,14 @@
+{
+  "name": "14-events-vs-callbacks",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how it's possible to use an event emitter to return a result asynchronously instead of using a callback",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

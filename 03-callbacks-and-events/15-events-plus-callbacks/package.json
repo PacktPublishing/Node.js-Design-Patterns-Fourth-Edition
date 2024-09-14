@@ -1,0 +1,14 @@
+{
+  "name": "15-events-plus-callbacks",
+  "version": "1.0.0",
+  "description": "This sample demonstrates that sometimes it can be convenient to combine callbacks and event emitters",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

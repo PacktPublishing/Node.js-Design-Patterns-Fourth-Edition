@@ -1,0 +1,14 @@
+{
+  "name": "12-eventemitter-extend",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to extend an EventEmitter",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
