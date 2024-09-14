@@ -1,0 +1,14 @@
+{
+  "name": "10-uncaught-errors",
+  "version": "1.0.0",
+  "description": "This example demonstrates how uncaught errors will cause the application to exit. It also shows how to catch those errors just before the application exits.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}

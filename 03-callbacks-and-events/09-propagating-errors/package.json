@@ -1,0 +1,14 @@
+{
+  "name": "09-propagating-errors",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to propagate errors in asynchronous CPS APIs.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
