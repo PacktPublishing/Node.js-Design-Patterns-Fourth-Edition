@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
   "files": {
     "ignoreUnknown": true,
     "ignore": ["**/invalid_json.json"]
@@ -12,12 +12,12 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "all": true,
-        "noConsole": "off"
+        "all": true
       },
       "correctness": {
         "all": true,
-        "noNodejsModules": "off"
+        "noNodejsModules": "off",
+        "noUndeclaredDependencies": "off"
       },
       "complexity": {
         "all": true
@@ -35,7 +35,13 @@
         "all": true,
         "noEmptyBlockStatements": "off",
         "noConsoleLog": "off",
-        "noRedundantUseStrict": "off"
+        "noRedundantUseStrict": "off",
+        "noConsole": {
+          "level": "info",
+          "options": {
+            "allow": ["assert", "error", "info", "warn", "log"]
+          }
+        }
       }
     }
   },
