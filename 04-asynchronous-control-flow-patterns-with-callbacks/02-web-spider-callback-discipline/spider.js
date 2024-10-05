@@ -21,7 +21,7 @@ function download(url, filename, cb) {
       if (err) {
         return cb(err)
       }
-      cb(null)
+      cb(null, content)
     })
   })
 }

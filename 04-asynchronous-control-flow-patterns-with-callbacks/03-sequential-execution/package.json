@@ -1,0 +1,16 @@
+{
+  "name": "03-sequential-execution",
+  "version": "1.0.0",
+  "description": "Simple example that demonstrates sequential tasks using callbacks",
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,6 +1,6 @@
-# 02-web-spider-callback-discipline
+# 06-web-spider-v3
 
-Refactored version of web spider that cleans up callback hell.
+Web spider example to demonstrate unlimited parallel execution.
 
 ## Run
 

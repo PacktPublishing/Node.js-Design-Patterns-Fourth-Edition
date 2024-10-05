@@ -1,0 +1,19 @@
+{
+  "name": "04-web-spider-v2",
+  "version": "1.0.0",
+  "description": "Web spider example to demonstrate sequential iteration",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^9.1.0",
+    "mkdirp": "^3.0.1",
+    "slug": "^9.1.0"
+  }
+}
