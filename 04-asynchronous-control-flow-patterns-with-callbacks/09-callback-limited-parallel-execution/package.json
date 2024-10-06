@@ -1,0 +1,14 @@
+{
+  "name": "09-callback-limited-parallel-execution",
+  "version": "1.0.0",
+  "description": "Simple example that demonstrates the callback limited parallel execution pattern",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT"
+}
