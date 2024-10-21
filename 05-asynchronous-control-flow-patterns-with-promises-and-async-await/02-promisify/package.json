@@ -1,0 +1,15 @@
+{
+  "name": "02-promisify",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to *promisify* a Node.js-style callback-based function",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

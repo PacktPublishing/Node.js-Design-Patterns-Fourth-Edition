@@ -1,0 +1,15 @@
+{
+  "name": "01-delay-with-promises",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use the `Promise` constructor to create a new `Promise` from scratch",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
