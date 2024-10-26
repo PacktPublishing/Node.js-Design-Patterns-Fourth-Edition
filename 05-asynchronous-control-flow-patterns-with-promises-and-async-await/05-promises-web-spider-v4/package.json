@@ -1,0 +1,19 @@
+{
+  "name": "05-promises-web-spider-v4",
+  "version": "1.0.0",
+  "description": "Web spider example to demonstrate limited parallel asynchronous execution with Promises",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^9.1.0",
+    "mkdirp": "^3.0.1",
+    "slug": "^9.1.0"
+  }
+}
