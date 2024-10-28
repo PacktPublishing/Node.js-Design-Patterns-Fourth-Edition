@@ -1,0 +1,15 @@
+{
+  "name": "10-async-await-return-await-trap",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how `return promise` is different than `return await promise` when it comes to error handling",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

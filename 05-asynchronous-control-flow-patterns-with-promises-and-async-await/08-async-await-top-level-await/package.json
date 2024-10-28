@@ -1,0 +1,15 @@
+{
+  "name": "08-async-await-top-level-await",
+  "version": "1.0.0",
+  "description": "This sample showcases how to use top-level await",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

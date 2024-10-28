@@ -1,0 +1,15 @@
+{
+  "name": "09-async-await-errors",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to deal with errors in async functions",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -1,0 +1,15 @@
+{
+  "name": "07-async-await-delay",
+  "version": "1.0.0",
+  "description": "This sample gives an introduction on the async/await construct",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
