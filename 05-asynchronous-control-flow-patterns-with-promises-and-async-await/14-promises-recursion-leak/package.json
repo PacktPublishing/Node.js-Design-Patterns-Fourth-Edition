@@ -1,0 +1,15 @@
+{
+  "name": "14-promises-recursion-leak",
+  "version": "1.0.0",
+  "description": "Demonstrates how infinite chains of unresolved Promises can lead to memory leaks",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

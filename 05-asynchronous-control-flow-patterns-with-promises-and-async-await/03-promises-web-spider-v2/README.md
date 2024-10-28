@@ -1,6 +1,7 @@
 # 03-promises-web-spider-v2
 
-Web spider example to demostrate sequential asynchronous execution with Promises
+Web spider example to demonstrate sequential asynchronous execution with
+Promises
 
 ## Run
 

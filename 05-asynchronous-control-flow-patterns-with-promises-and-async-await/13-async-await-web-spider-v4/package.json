@@ -1,7 +1,7 @@
 {
-  "name": "11-async-await-web-spider-v2",
+  "name": "13-async-await-web-spider-v4",
   "version": "1.0.0",
-  "description": "Web spider example to demonstrate sequential asynchronous execution with async/await",
+  "description": "Web spider example to demonstrate limited parallel asynchronous execution with async/await",
   "type": "module",
   "scripts": {},
   "engines": {

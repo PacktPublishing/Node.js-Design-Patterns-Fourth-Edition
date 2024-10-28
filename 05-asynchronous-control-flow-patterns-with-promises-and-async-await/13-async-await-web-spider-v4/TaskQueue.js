@@ -23,7 +23,7 @@ export class TaskQueue extends EventEmitter {
       const task = this.queue.shift()
       task()
         .catch(err => {
-          this.emit('error', err)
+          this.emit('taskError', err)
         })
         .finally(() => {
           this.running--

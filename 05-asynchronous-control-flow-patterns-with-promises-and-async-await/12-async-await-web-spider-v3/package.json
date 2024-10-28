@@ -1,7 +1,7 @@
 {
   "name": "12-async-await-web-spider-v3",
   "version": "1.0.0",
-  "description": "Web spider example to demostrate unlimited parallel asynchronous execution with async/await.",
+  "description": "Web spider example to demonstrate unlimited parallel asynchronous execution with async/await.",
   "type": "module",
   "scripts": {},
   "engines": {

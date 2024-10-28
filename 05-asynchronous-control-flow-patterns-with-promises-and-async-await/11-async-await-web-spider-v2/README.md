@@ -1,6 +1,6 @@
 # 11-async-await-web-spider-v2
 
-Web spider example to demostrate sequential asynchronous execution with
+Web spider example to demonstrate sequential asynchronous execution with
 async/await
 
 ## Run
