@@ -1,0 +1,15 @@
+{
+  "name": "01-gzip-buffer-vs-stream",
+  "version": "1.0.0",
+  "description": "This example shows the different implementations (buffer vs streaming) for a simple gzip script",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
