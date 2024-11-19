@@ -1,0 +1,15 @@
+{
+  "name": "03-crypto-gzip-server",
+  "version": "1.0.0",
+  "description": "This examples shows how to implement a add an encryption layer to the previous example.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
