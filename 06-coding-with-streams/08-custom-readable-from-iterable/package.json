@@ -1,0 +1,15 @@
+{
+  "name": "08-custom-readable-from-iterable",
+  "version": "1.0.0",
+  "description": "This example shows how to implement a custom Readable stream using `Readable.from`.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

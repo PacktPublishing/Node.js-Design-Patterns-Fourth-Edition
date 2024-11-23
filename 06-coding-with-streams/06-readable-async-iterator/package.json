@@ -1,7 +1,7 @@
 {
-  "name": "05-readabl-flowing",
+  "name": "06-readable-async-iterator",
   "version": "1.0.0",
-  "description": "This example shows how to consume a readable stream in flowing mode.",
+  "description": "This examples shows how to consume a readable stream using the async iterator interface.",
   "type": "module",
   "scripts": {},
   "engines": {

@@ -1,0 +1,17 @@
+{
+  "name": "09-writable-http-entropy-server",
+  "version": "1.0.0",
+  "description": "This example shows how to write into a readable stream, specifically an HTTP response sent by a server.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "chance": "^1.1.12"
+  }
+}
