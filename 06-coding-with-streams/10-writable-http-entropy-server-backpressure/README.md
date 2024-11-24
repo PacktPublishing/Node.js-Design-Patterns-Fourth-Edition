@@ -1,7 +1,7 @@
-# 09-writable-http-entropy-server
+# 10-writable-http-entropy-server-backpressure
 
-This example shows how to write into a readable stream, specifically an HTTP
-response sent by a server.
+This example shows how to write into a writable stream, specifically an HTTP
+response sent by a server also taking back-pressure into account.
 
 ## Dependencies
 

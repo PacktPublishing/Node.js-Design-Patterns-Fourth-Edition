@@ -1,0 +1,17 @@
+{
+  "name": "11-custom-writable-to-file-stream",
+  "version": "1.0.0",
+  "description": "This example shows how to create a custom writable stream.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "mkdirp": "^3.0.1"
+  }
+}
