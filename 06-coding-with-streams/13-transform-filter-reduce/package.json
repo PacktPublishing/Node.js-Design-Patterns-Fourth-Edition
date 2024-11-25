@@ -1,0 +1,17 @@
+{
+  "name": "13-transform-filter-reduce",
+  "version": "1.0.0",
+  "description": "This example shows how to use Transform streams to implement streaming data filter and reduce blocks.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "csv-parse": "^5.6.0"
+  }
+}
