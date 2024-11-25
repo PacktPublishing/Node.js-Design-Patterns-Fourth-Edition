@@ -1,0 +1,15 @@
+{
+  "name": "17-pipeline-helper",
+  "version": "1.0.0",
+  "description": "This example shows how to create an advanced pipeline using `stream.pipeline()`",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
