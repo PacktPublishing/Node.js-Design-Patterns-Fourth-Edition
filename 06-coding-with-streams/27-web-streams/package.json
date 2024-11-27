@@ -1,0 +1,15 @@
+{
+  "name": "27-web-streams",
+  "version": "1.0.0",
+  "description": "This example demonstrates interoperability between Node.js streams and Web Streams",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
