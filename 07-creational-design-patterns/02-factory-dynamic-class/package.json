@@ -1,0 +1,15 @@
+{
+  "name": "02-factory-dynamic-class",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to create a Factory function that can resolve the class of the object to create at runtime",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
