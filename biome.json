@@ -12,7 +12,8 @@
     "rules": {
       "recommended": true,
       "nursery": {
-        "all": true
+        "all": true,
+        "noProcessEnv": "off"
       },
       "correctness": {
         "all": true,

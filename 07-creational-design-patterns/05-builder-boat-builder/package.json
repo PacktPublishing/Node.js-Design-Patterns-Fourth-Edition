@@ -1,0 +1,17 @@
+{
+  "name": "05-builder-boat-builder",
+  "version": "1.0.0",
+  "description": "This example demonstrate how to use the builder pattern to simplify the creation of a Boat object",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
