@@ -1,0 +1,18 @@
+{
+  "name": "10-dependency-injection",
+  "version": "1.0.0",
+  "description": "This example shows how to wire dependencies using the dependency injection pattern",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}

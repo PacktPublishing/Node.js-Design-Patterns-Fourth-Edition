@@ -4,8 +4,8 @@
   "description": "Code samples for the book Node.js Design Patterns, 4th Edition by Mario Casciaro and Luciano Mammino",
   "scripts": {
     "test": "pnpm run test:lint",
-    "test:lint": "biome check --no-errors-on-unmatched",
-    "test:lint-fix": "biome check --write --no-errors-on-unmatched",
+    "test:lint": "biome check --organize-imports-enabled=true --no-errors-on-unmatched",
+    "test:lint-fix": "biome check --organize-imports-enabled=true --fix",
     "prepare": "husky"
   },
   "keywords": ["node.js", "design patterns", "book", "code samples"],
