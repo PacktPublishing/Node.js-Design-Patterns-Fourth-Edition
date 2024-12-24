@@ -1,0 +1,15 @@
+{
+  "name": "08-singleton-false-uniqueness",
+  "version": "1.0.0",
+  "description": "This example demonstrate how under certain conditions, an instance exported by a module stops to be a Singleton",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

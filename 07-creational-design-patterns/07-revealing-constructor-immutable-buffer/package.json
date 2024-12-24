@@ -1,0 +1,15 @@
+{
+  "name": "07-revealing-constructor-immutable-buffer",
+  "version": "1.0.0",
+  "description": "This example demonstrate how to use the revealing constructor pattern to implement an immutable buffer",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
