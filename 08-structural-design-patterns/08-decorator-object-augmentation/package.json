@@ -1,0 +1,15 @@
+{
+  "name": "08-decorator-object-augmentation",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to implement the decorator pattern using object augmentation",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

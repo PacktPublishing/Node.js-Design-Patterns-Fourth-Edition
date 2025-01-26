@@ -1,0 +1,15 @@
+{
+  "name": "04-proxy-es2015",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to create proxies using the ES2015 Proxy helper",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

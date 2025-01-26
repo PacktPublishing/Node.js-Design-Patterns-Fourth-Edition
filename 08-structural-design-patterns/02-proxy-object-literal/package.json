@@ -1,0 +1,15 @@
+{
+  "name": "02-proxy-object-literal",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to create a proxy object using object literals",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

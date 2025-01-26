@@ -1,0 +1,15 @@
+{
+  "name": "07-decorator-composition",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to implement a decorator using composition",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

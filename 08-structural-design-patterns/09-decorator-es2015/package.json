@@ -1,0 +1,15 @@
+{
+  "name": "09-decorator-es2015",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to implement the decorator pattern using ES2015 proxy",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
