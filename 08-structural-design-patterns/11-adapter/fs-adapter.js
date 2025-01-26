@@ -9,7 +9,9 @@ export function createFsAdapter(db) {
       const value = await db.get(resolve(filename), opt)
 
       if (typeof value === 'undefined') {
-        const e = new Error(`ENOENT, open "${filename}"`)
+        const e = new Error(
+          `ENOENT: no such file or directory, open '${filename}'`
+        )
         e.code = 'ENOENT'
         e.errno = 34
         e.path = filename
