@@ -35,6 +35,8 @@ function download(url, filename, cb) {
 function spiderLinks(currentUrl, body, maxDepth, cb) {
   if (maxDepth === 0) {
     // Remember Zalgo from Chapter 3?
+    // To prevent that, this function is designed to always
+    // invoke its callback asynchronously.
     return process.nextTick(cb)
   }
 
@@ -74,27 +76,27 @@ export function spider(url, maxDepth, cb) {
         return cb()
       }
 
-      readFile(filename, 'utf8', (err, fileContent) => {
+      return readFile(filename, 'utf8', (err, fileContent) => {
         if (err) {
           // error reading the file
           return cb(err)
         }
         return spiderLinks(url, fileContent, maxDepth, cb)
       })
-    } else {
-      // The file does not exist, download it
-      download(url, filename, (err, fileContent) => {
-        if (err) {
-          // error downloading the file
-          return cb(err)
-        }
-        // if the file is an HTML file, spider it
-        if (filename.endsWith('.html')) {
-          return spiderLinks(url, fileContent.toString('utf8'), maxDepth, cb)
-        }
-        // otherwise, stop here
-        return cb()
-      })
     }
+
+    // The file does not exist, download it
+    download(url, filename, (err, fileContent) => {
+      if (err) {
+        // error downloading the file
+        return cb(err)
+      }
+      // if the file is an HTML file, spider it
+      if (filename.endsWith('.html')) {
+        return spiderLinks(url, fileContent.toString('utf8'), maxDepth, cb)
+      }
+      // otherwise, stop here
+      return cb()
+    })
   })
 }
