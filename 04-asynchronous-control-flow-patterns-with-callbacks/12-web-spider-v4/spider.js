@@ -62,7 +62,7 @@ function spiderTask(url, maxDepth, queue, cb) {
         return cb()
       }
 
-      readFile(filename, 'utf8', (err, fileContent) => {
+      return readFile(filename, 'utf8', (err, fileContent) => {
         if (err) {
           // error reading the file
           return cb(err)
@@ -70,22 +70,21 @@ function spiderTask(url, maxDepth, queue, cb) {
         spiderLinks(url, fileContent, maxDepth, queue)
         return cb()
       })
-    } else {
-      // The file does not exist, download it
-      download(url, filename, (err, fileContent) => {
-        if (err) {
-          // error downloading the file
-          return cb(err)
-        }
-        // if the file is an HTML file, spider it
-        if (filename.endsWith('.html')) {
-          spiderLinks(url, fileContent.toString('utf8'), maxDepth, queue)
-          return cb()
-        }
-        // otherwise, stop here
-        return cb()
-      })
     }
+    // The file does not exist, download it
+    download(url, filename, (err, fileContent) => {
+      if (err) {
+        // error downloading the file
+        return cb(err)
+      }
+      // if the file is an HTML file, spider it
+      if (filename.endsWith('.html')) {
+        spiderLinks(url, fileContent.toString('utf8'), maxDepth, queue)
+        return cb()
+      }
+      // otherwise, stop here
+      return cb()
+    })
   })
 }
 
