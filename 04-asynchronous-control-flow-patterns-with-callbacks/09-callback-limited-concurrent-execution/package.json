@@ -1,7 +1,7 @@
 {
-  "name": "09-callback-limited-parallel-execution",
+  "name": "09-callback-limited-concurrent-execution",
   "version": "1.0.0",
-  "description": "Simple example that demonstrates the callback limited parallel execution pattern",
+  "description": "Simple example that demonstrates the callback limited concurrent execution pattern",
   "type": "module",
   "scripts": {},
   "engines": {

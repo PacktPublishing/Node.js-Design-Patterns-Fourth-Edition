@@ -1,7 +1,7 @@
 {
-  "name": "07-callback-unlimited-parallel-execution-pattern",
+  "name": "07-callback-unlimited-concurrent-execution-pattern",
   "version": "1.0.0",
-  "description": "Simple example that demonstrates the callback parallel execution pattern",
+  "description": "Simple example that demonstrates the callback concurrent execution pattern",
   "type": "module",
   "scripts": {},
   "engines": {

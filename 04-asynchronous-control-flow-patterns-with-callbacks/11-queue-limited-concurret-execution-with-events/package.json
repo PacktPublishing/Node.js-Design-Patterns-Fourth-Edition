@@ -1,7 +1,7 @@
 {
-  "name": "11-queue-limited-parallel-execution-with-events",
+  "name": "11-queue-limited-concurret-execution-with-events",
   "version": "1.0.0",
-  "description": "Simple example that demonstrates the callback limited parallel execution pattern using a Queue",
+  "description": "Simple example that demonstrates the callback limited concurrent execution pattern using events",
   "type": "module",
   "scripts": {},
   "engines": {
