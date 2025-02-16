@@ -1,0 +1,16 @@
+{
+  "name": "02-state-failsafe-socket",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use the State pattern to create a client socket that doesn't break when it loses connection with the server",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
