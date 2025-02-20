@@ -1,0 +1,12 @@
+{
+  "listen": {
+    "port": 3000,
+    "host": "127.0.0.1"
+  },
+  "timeouts": {
+    "headersTimeoutMs": 60000,
+    "keepAliveTimeoutMs": 5000,
+    "requestTimeoutMs": 300000
+  },
+  "env": {}
+}

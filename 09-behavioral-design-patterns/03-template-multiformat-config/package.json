@@ -1,0 +1,19 @@
+{
+  "name": "03-template-multiformat-config",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use the Template pattern to create different configuration managers supporting different file formats",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "smol-toml": "^1.3.1",
+    "yaml": "^2.7.0"
+  },
+  "devDependencies": {}
+}
