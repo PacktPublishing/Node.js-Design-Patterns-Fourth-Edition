@@ -1,0 +1,16 @@
+{
+  "name": "05-iterable-matrix",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to implement the Iterable protocol",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

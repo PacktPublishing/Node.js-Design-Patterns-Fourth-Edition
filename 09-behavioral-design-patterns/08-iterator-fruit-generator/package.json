@@ -1,0 +1,16 @@
+{
+  "name": "08-iterator-fruit-generator",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to create a simple generator function",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

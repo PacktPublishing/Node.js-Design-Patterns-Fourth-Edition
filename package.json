@@ -20,5 +20,8 @@
   },
   "lint-staged": {
     "*": ["pnpm run test:lint"]
+  },
+  "dependencies": {
+    "mkdirp": "^3.0.1"
   }
 }

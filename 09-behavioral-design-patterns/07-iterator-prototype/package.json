@@ -1,0 +1,16 @@
+{
+  "name": "07-iterator-prototype",
+  "version": "1.0.0",
+  "description": "This sample showcases how to use the iterator prototype to define an iterator",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

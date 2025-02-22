@@ -1,0 +1,16 @@
+{
+  "name": "09-iterator-two-way",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to pass values back to a generator",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
