@@ -1,0 +1,17 @@
+{
+  "name": "13-async-iterator-streams",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use an async generator to implement an async iterator",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "split2": "^4.2.0"
+  }
+}
