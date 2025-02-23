@@ -1,0 +1,17 @@
+{
+  "name": "17-command-s3-put-object",
+  "version": "1.0.0",
+  "description": "This sample showcases how the AWS SDK uses the command pattern",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.750.0"
+  }
+}

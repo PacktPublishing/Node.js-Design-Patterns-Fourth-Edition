@@ -1,7 +1,6 @@
-# 13-async-iterator-streams
+# 15-middleware-zmq
 
-This sample demonstrates how to use an async generator to implement an async
-iterator.
+This sample demonstrates how to build a middleware infrastructure for ZMQ.
 
 ## Dependencies
 
@@ -30,8 +29,14 @@ yarn install
 
 ## Run
 
-To run the example install its dependencies with `npm install`, then launch:
+To run the example run the following commands in two different terminals:
 
 ```bash
-node index.js
+node server.js
+```
+
+And then:
+
+```bash
+node client.js
 ```

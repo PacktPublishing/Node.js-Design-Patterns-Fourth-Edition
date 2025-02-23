@@ -1,6 +1,7 @@
 {
   "name": "node-js-design-patterns-fourth-edition",
   "version": "1.0.0",
+  "type": "module",
   "description": "Code samples for the book Node.js Design Patterns, 4th Edition by Mario Casciaro and Luciano Mammino",
   "scripts": {
     "test": "pnpm run test:lint",

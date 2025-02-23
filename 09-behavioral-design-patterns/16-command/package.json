@@ -1,0 +1,16 @@
+{
+  "name": "16-command",
+  "version": "1.0.0",
+  "description": "This sample demonstrates a simple implementation of the Command pattern",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

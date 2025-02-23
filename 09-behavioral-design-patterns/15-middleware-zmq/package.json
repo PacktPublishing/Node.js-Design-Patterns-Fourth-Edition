@@ -1,0 +1,17 @@
+{
+  "name": "15-middleware-zmq",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to build a middleware infrastructure for ZMQ",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "zeromq": "^6.3.0"
+  }
+}

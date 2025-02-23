@@ -1,7 +1,6 @@
-# 13-async-iterator-streams
+# 17-command-s3-put-object
 
-This sample demonstrates how to use an async generator to implement an async
-iterator.
+This sample showcases how the AWS SDK uses the command pattern.
 
 ## Dependencies
 
@@ -30,8 +29,8 @@ yarn install
 
 ## Run
 
-To run the example install its dependencies with `npm install`, then launch:
+To run the example launch:
 
-```bash
+```
 node index.js
 ```
