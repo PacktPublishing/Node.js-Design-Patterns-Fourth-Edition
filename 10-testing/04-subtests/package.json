@@ -1,0 +1,15 @@
+{
+  "name": "04-subtests",
+  "version": "1.0.0",
+  "description": "This sample showcases how you can define subtests in a test suite",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}

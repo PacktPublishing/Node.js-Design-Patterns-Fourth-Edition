@@ -19,3 +19,18 @@ test('Calculates basket total', () => {
     `Expected total to be ${expectedTotal}, but got ${result}`
   )
 })
+
+test('Calculates basket total with no items', () => {
+  const basket = {
+    items: [],
+  }
+
+  const result = calculateBasketTotal(basket)
+
+  const expectedTotal = 0
+  equal(
+    result,
+    expectedTotal,
+    `Expected total to be ${expectedTotal}, but got ${result}`
+  )
+})

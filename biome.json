@@ -30,7 +30,8 @@
         "all": true
       },
       "style": {
-        "all": true
+        "all": true,
+        "noDoneCallback": "off"
       },
       "suspicious": {
         "all": true,
