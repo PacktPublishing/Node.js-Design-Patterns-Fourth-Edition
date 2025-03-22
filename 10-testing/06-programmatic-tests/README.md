@@ -1,4 +1,4 @@
-# 05-programmatic-tests
+# 06-programmatic-tests
 
 This sample showcases how to use subtests for programmatically defined tests
 

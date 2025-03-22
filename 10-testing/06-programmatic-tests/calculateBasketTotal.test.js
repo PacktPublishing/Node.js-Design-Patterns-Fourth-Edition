@@ -2,7 +2,7 @@ import { equal } from 'node:assert/strict'
 import { test } from 'node:test'
 import { calculateBasketTotal } from './calculateBasketTotal.js'
 
-test('Calculates basket total', async t => {
+test('Calculates basket total', { concurrency: true }, t => {
   const cases = [
     {
       name: 'Empty basket',
@@ -10,7 +10,7 @@ test('Calculates basket total', async t => {
       expectedTotal: 0,
     },
     {
-      name: 'one croissant',
+      name: 'One croissant',
       basket: { items: [{ name: 'Croissant', unitPrice: 2, quantity: 1 }] },
       expectedTotal: 2,
     },
@@ -27,7 +27,7 @@ test('Calculates basket total', async t => {
   ]
 
   for (const { name, basket, expectedTotal } of cases) {
-    await t.test(name, () => {
+    t.test(name, () => {
       const result = calculateBasketTotal(basket)
       equal(
         result,
