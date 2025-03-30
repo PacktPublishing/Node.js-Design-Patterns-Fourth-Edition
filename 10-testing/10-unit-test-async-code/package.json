@@ -1,0 +1,15 @@
+{
+  "name": "10-unit-test-async-code",
+  "version": "1.0.0",
+  "description": "Demonstrates how to test async code",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
