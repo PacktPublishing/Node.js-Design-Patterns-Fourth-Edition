@@ -1,0 +1,18 @@
+{
+  "name": "11-unit-test-mock-http",
+  "version": "1.0.0",
+  "description": "Demonstrates how to mock HTTP requests in unit tests",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=22"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^9.1.0",
+    "undici": "^7.6.0"
+  }
+}
