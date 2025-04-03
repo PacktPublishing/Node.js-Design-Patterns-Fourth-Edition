@@ -2,7 +2,7 @@
   "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
   "files": {
     "ignoreUnknown": true,
-    "ignore": ["**/invalid_json.json"]
+    "ignore": ["**/invalid_json.json", "coverage/", "lcov-viewer/"]
   },
   "organizeImports": {
     "enabled": true
@@ -31,7 +31,8 @@
       },
       "style": {
         "all": true,
-        "noDoneCallback": "off"
+        "noDoneCallback": "off",
+        "useFilenamingConvention": "off"
       },
       "suspicious": {
         "all": true,
