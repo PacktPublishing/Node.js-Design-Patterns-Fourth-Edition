@@ -13,7 +13,8 @@
       "recommended": true,
       "nursery": {
         "all": true,
-        "noProcessEnv": "off"
+        "noProcessEnv": "off",
+        "useImportRestrictions": "off"
       },
       "correctness": {
         "all": true,

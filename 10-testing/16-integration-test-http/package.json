@@ -1,7 +1,7 @@
 {
-  "name": "15-integration-test",
+  "name": "16-integration-test-http",
   "version": "1.0.0",
-  "description": "Demonstrates how create an integration test",
+  "description": "Demonstrates how to create an integration test for an HTTP server using Fastify",
   "type": "module",
   "scripts": {},
   "engines": {
@@ -12,6 +12,7 @@
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
   "dependencies": {
+    "fastify": "^5.2.2",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
   }
