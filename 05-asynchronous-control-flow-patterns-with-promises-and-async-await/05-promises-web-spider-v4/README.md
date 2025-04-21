@@ -1,6 +1,6 @@
 # 05-promises-web-spider-v4
 
-Web spider example to demonstrate limited parallel asynchronous execution with
+Web spider example to demonstrate limited concurrent asynchronous execution with
 Promises
 
 ## Dependencies

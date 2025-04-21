@@ -1,7 +1,7 @@
 # 12-async-await-web-spider-v3
 
-Web spider example to demonstrate unlimited parallel asynchronous execution with
-async/await.
+Web spider example to demonstrate unlimited concurrent asynchronous execution
+with async/await.
 
 ## Dependencies
 

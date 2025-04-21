@@ -1,7 +1,7 @@
 {
   "name": "04-promises-web-spider-v3",
   "version": "1.0.0",
-  "description": "Web spider example to demonstrate parallel asynchronous execution with Promises",
+  "description": "Web spider example to demonstrate concurrent asynchronous execution with Promises",
   "type": "module",
   "scripts": {},
   "engines": {
