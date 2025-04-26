@@ -1,0 +1,15 @@
+{
+  "name": "01-local-initialization-check",
+  "version": "1.0.0",
+  "description": "This sample showcases some simple solutions to the problem of asynchronously initialized modules.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
