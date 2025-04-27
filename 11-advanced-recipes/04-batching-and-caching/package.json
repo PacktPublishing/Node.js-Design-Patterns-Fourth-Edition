@@ -1,0 +1,21 @@
+{
+  "name": "04-batching-and-caching",
+  "version": "1.0.0",
+  "description": "This sample showcases how asynchronous batching and caching work",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "level": "^10.0.0",
+    "nanoid": "^5.1.5"
+  },
+  "devDependencies": {
+    "autocannon": "^8.0.0"
+  }
+}
