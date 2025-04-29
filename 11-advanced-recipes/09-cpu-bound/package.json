@@ -1,0 +1,15 @@
+{
+  "name": "09-cpu-bound",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to run a CPU-bound task in Node.js using setImmediate or multiple processes.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {}
+}
