@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Simple example that demonstrates sequential tasks using callbacks",
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   },
   "engineStrict": true,
   "type": "module",
