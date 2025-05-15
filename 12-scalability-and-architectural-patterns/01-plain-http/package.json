@@ -1,0 +1,20 @@
+{
+  "name": "01-plain-http",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to benchmark a simple http server",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "benchmark": "autocannon http://localhost:8080"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "devDependencies": {
+    "autocannon": "^8.0.0"
+  }
+}
