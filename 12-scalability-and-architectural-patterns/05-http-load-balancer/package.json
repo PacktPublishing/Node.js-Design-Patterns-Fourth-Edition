@@ -1,0 +1,25 @@
+{
+  "name": "05-http-load-balancer",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to run a set of Node.js servers behind a load balancer",
+  "type": "module",
+  "scripts": {
+    "start": "pm2 start --namespace 'app' --name 'app1' app.js -- 8081 && pm2 start --namespace 'app' --name 'app2' app.js -- 8082 && pm2 start --namespace 'app' --name 'app3' app.js -- 8083 && pm2 start --namespace 'app' --name 'app4' app.js -- 8084",
+    "start:nginx": "nginx -c ${PWD}/nginx.conf",
+    "stop": "pm2 stop app",
+    "benchmark": "autocannon http://localhost:8080"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "devDependencies": {
+    "autocannon": "^8.0.0"
+  },
+  "dependencies": {
+    "pm2": "^6.0.6"
+  }
+}
