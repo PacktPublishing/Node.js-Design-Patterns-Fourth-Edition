@@ -1,0 +1,21 @@
+{
+  "name": "06-http-dynamic-load-balancer",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to implement a dynamic load balancer in Node.js using consul as a service discovery mechanism",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "devDependencies": {
+    "autocannon": "^8.0.0"
+  },
+  "dependencies": {
+    "httpxy": "^0.1.7",
+    "portfinder": "^1.0.37"
+  }
+}
