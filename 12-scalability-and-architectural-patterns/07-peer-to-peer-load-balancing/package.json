@@ -1,0 +1,16 @@
+{
+  "name": "07-peer-to-peer-load-balancing",
+  "version": "1.0.0",
+  "description": "This example demonstrates how to implement peer-to-peer load balancing",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
