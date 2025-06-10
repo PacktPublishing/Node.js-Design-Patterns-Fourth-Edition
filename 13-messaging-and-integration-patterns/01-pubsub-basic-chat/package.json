@@ -1,0 +1,18 @@
+{
+  "name": "01-pubsub-basic-chat",
+  "version": "1.0.0",
+  "description": "This sample demonstrates the Pub/Sub pattern by implementing a basic chat application using WebSockets.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "serve-handler": "^6.1.6",
+    "ws": "^8.18.2"
+  }
+}

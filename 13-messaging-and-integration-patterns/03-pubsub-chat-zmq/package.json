@@ -1,0 +1,19 @@
+{
+  "name": "03-pubsub-chat-zmq",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to integrate different server instances of a chat application using ZeroMQ",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "serve-handler": "^6.1.6",
+    "ws": "^8.18.2",
+    "zeromq": "^6.3.0"
+  }
+}
