@@ -1,0 +1,58 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      amqplib:
+        specifier: ^0.10.8
+        version: 0.10.8
+      indexed-string-variation:
+        specifier: ^2.1.0
+        version: 2.1.0
+
+packages:
+
+  amqplib@0.10.8:
+    resolution: {integrity: sha512-Tfn1O9sFgAP8DqeMEpt2IacsVTENBpblB3SqLdn0jK2AeX8iyCvbptBc8lyATT9bQ31MsjVwUSQ1g8f4jHOUfw==}
+    engines: {node: '>=10'}
+
+  buffer-more-ints@1.0.0:
+    resolution: {integrity: sha512-EMetuGFz5SLsT0QTnXzINh4Ksr+oo4i+UGTXEshiGCQWnsgSs7ZhJ8fzlwQ+OzEMs0MpDAMr1hxnblp5a4vcHg==}
+
+  indexed-string-variation@2.1.0:
+    resolution: {integrity: sha512-FTqiGtXcxfblaAXJyBe44+db34fX3ls8vCE4qJl2AOOmHOFOnxSq+tCmhGvd0RlY0HcpGBRl/rUCfRqyvMX1yQ==}
+    engines: {node: '>=22'}
+
+  querystringify@2.2.0:
+    resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
+
+  requires-port@1.0.0:
+    resolution: {integrity: sha512-KigOCHcocU3XODJxsu8i/j8T9tzT4adHiecwORRQ0ZZFcp7ahwXuRU1m+yuO90C5ZUyGeGfocHDI14M3L3yDAQ==}
+
+  url-parse@1.5.10:
+    resolution: {integrity: sha512-WypcfiRhfeUP9vvF0j6rw0J3hrWrw6iZv3+22h6iRMJ/8z1Tj6XfLP4DsUix5MhMPnXpiHDoKyoZ/bdCkwBCiQ==}
+
+snapshots:
+
+  amqplib@0.10.8:
+    dependencies:
+      buffer-more-ints: 1.0.0
+      url-parse: 1.5.10
+
+  buffer-more-ints@1.0.0: {}
+
+  indexed-string-variation@2.1.0: {}
+
+  querystringify@2.2.0: {}
+
+  requires-port@1.0.0: {}
+
+  url-parse@1.5.10:
+    dependencies:
+      querystringify: 2.2.0
+      requires-port: 1.0.0

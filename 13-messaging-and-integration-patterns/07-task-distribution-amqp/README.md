@@ -1,7 +1,7 @@
-# 04-pubsub-amqp
+# 07-task-distribution-amqp
 
-This sample demonstrates how to integrate a chat application and a microservice
-using AMQP
+This sample demonstrates how to distribute tasks to a set of remote workers
+using RabbitMQ and AMQP.
 
 ## Dependencies
 
@@ -44,20 +44,16 @@ To run the various components, run in different terminals the following
 commands:
 
 ```bash
-node index.js 8080 # runs a version of the chat application on port 8080
-node index.js 8081 # runs a version of the chat application on port 8081
-node historySvc.js # runs the history service
+node worker.js # runs a worker that will process tasks
+node worker.js # runs a second worker that will process tasks (you can run as many as you want)
+node collector.js # runs a collector that will collect results from the workers
+node producer.js 4 f8e966d1e207d02c44511a58dccff2f5429e9a3b # runs a producer that will send tasks to the workers
 ```
 
-Then you can access the chat application by opening your browser and navigating
-to:
-
-```
-http://localhost:8080
-```
-
-or
-
-```
-http://localhost:8081
-```
+> [!TIP] If you want to test other hashes, you can generate them with the
+> following code:
+>
+> ```js
+> import { createHash } from "node:crypto";
+> console.log(createHash("sha1").update("your-string-here").digest("hex"));
+> ```

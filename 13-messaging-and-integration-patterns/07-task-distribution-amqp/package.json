@@ -1,7 +1,7 @@
 {
-  "name": "06-task-distribution-zmq",
+  "name": "07-task-distribution-amqp",
   "version": "1.0.0",
-  "description": "This sample demonstrates how to run parallel tasks using a messaging pipeline and ZeroMQ",
+  "description": "This sample demonstrates how to distribute tasks to a set of remote workers using RabbitMQ and AMQP",
   "type": "module",
   "scripts": {},
   "engines": {
@@ -13,6 +13,6 @@
   "license": "MIT",
   "dependencies": {
     "indexed-string-variation": "^2.1.0",
-    "zeromq": "^6.3.0"
+    "amqplib": "^0.10.8"
   }
 }
