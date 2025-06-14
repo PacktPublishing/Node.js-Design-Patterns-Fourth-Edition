@@ -7,7 +7,6 @@ export async function reserveSeat(db, eventId, userId) {
   }
 
   const existing = await db.query(
-    // biome-ignore lint/nursery/noSecrets: <explanation>
     'SELECT COUNT(*) AS count FROM reservations WHERE eventId = ?',
     [eventId]
   )

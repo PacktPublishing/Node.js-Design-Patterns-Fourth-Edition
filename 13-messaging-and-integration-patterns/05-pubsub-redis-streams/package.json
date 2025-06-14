@@ -1,0 +1,19 @@
+{
+  "name": "05-pubsub-redis-streams",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to use Redis streams to provide persistent message storage and real-time capabilities to a chat application",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^5.6.1",
+    "serve-handler": "^6.1.6",
+    "ws": "^8.18.2"
+  }
+}

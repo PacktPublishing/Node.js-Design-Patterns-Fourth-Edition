@@ -5,7 +5,6 @@ import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3' // v3.750.0
 const [bucketName, filePath] = process.argv.slice(2)
 
 if (!(bucketName && filePath)) {
-  // biome-ignore lint/nursery/noSecrets: not a secret
   console.error('Usage: node index.js <bucketName> <filePath>')
   process.exit(1)
 }

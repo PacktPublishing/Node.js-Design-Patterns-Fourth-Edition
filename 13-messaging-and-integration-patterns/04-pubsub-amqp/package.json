@@ -1,0 +1,21 @@
+{
+  "name": "04-pubsub-amqp",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to integrate a chat application and a microservice using AMQP",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "amqplib": "^0.10.8",
+    "level": "^10.0.0",
+    "serve-handler": "^6.1.6",
+    "ulid": "^3.0.1",
+    "ws": "^8.18.2"
+  }
+}

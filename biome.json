@@ -19,7 +19,8 @@
       "nursery": {
         "all": true,
         "noProcessEnv": "off",
-        "useImportRestrictions": "off"
+        "useImportRestrictions": "off",
+        "noSecrets": "off"
       },
       "correctness": {
         "all": true,

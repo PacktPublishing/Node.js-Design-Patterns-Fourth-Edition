@@ -1,0 +1,47 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      indexed-string-variation:
+        specifier: ^2.1.0
+        version: 2.1.0
+      zeromq:
+        specifier: ^6.3.0
+        version: 6.4.2
+
+packages:
+
+  cmake-ts@0.6.1:
+    resolution: {integrity: sha512-uUn2qGhf20j8W/sQ7+UnvvqO1zNccqgbLgwRJi7S23FsjMWJqxvKK80Vc+tvLNKfpJzwH0rgoQD1l24SMnX0yg==}
+    hasBin: true
+
+  indexed-string-variation@2.1.0:
+    resolution: {integrity: sha512-FTqiGtXcxfblaAXJyBe44+db34fX3ls8vCE4qJl2AOOmHOFOnxSq+tCmhGvd0RlY0HcpGBRl/rUCfRqyvMX1yQ==}
+    engines: {node: '>=22'}
+
+  node-addon-api@8.4.0:
+    resolution: {integrity: sha512-D9DI/gXHvVmjHS08SVch0Em8G5S1P+QWtU31appcKT/8wFSPRcdHadIFSAntdMMVM5zz+/DL+bL/gz3UDppqtg==}
+    engines: {node: ^18 || ^20 || >= 21}
+
+  zeromq@6.4.2:
+    resolution: {integrity: sha512-FnQlI4lEAewE4JexJ6kqQuBVzRf0Mg1n/qE3uXilfosf+X5lqJPiaYfdL/w4SzgAEVBTyqbMt9NbjwI5H89Yaw==}
+    engines: {node: '>= 12'}
+
+snapshots:
+
+  cmake-ts@0.6.1: {}
+
+  indexed-string-variation@2.1.0: {}
+
+  node-addon-api@8.4.0: {}
+
+  zeromq@6.4.2:
+    dependencies:
+      cmake-ts: 0.6.1
+      node-addon-api: 8.4.0

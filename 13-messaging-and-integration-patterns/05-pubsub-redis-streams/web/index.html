@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Anonymous WebSocket Chat</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        background-color: #f5f5f5;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .chat-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        max-width: 1200px;
+        /* Increased from 800px for larger screens */
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .messages-area {
+        flex: 1;
+        overflow-y: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .message {
+        max-width: 60%;
+        /* Reduced from 70% to look better on wider screens */
+        padding: 12px 16px;
+        border-radius: 18px;
+        word-wrap: break-word;
+        line-height: 1.4;
+      }
+
+      .message.sent {
+        align-self: flex-end;
+        background-color: #007aff;
+        color: white;
+        border-bottom-right-radius: 4px;
+      }
+
+      .message.received {
+        align-self: flex-start;
+        background-color: #e5e5ea;
+        color: #000;
+        border-bottom-left-radius: 4px;
+      }
+
+      .message-content {
+        margin-bottom: 4px;
+      }
+
+      .message-time {
+        font-size: 11px;
+        opacity: 0.7;
+        text-align: right;
+      }
+
+      .message.received .message-time {
+        text-align: left;
+      }
+
+      .input-area {
+        padding: 16px 20px;
+        border-top: 1px solid #e5e5ea;
+        background-color: white;
+      }
+
+      .input-container {
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+        max-width: 1000px;
+        /* Added to center the input on very wide screens */
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .message-input {
+        flex: 1;
+        padding: 12px 16px;
+        border: 1px solid #e5e5ea;
+        border-radius: 20px;
+        font-size: 16px;
+        font-family: inherit;
+        resize: none;
+        outline: none;
+        min-height: 44px;
+        max-height: 120px;
+        line-height: 1.4;
+      }
+
+      .message-input:focus {
+        border-color: #007aff;
+      }
+
+      .send-button {
+        padding: 12px 20px;
+        background-color: #007aff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.2s;
+        min-width: 60px;
+      }
+
+      .send-button:hover:not(:disabled) {
+        background-color: #0056cc;
+      }
+
+      .send-button:disabled {
+        background-color: #c7c7cc;
+        cursor: not-allowed;
+      }
+
+      /* Responsive design - updated breakpoints */
+      @media (min-width: 1600px) {
+        .chat-container {
+          max-width: 1400px;
+        }
+
+        .message {
+          max-width: 50%;
+        }
+      }
+
+      @media (min-width: 1200px) and (max-width: 1599px) {
+        .chat-container {
+          max-width: 1000px;
+        }
+
+        .message {
+          max-width: 55%;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        .chat-container {
+          max-width: 90%;
+        }
+      }
+
+      @media (max-width: 767px) {
+        .chat-container {
+          height: 100vh;
+          box-shadow: none;
+          max-width: 100%;
+        }
+
+        .messages-area {
+          padding: 16px;
+        }
+
+        .message {
+          max-width: 85%;
+        }
+
+        .input-area {
+          padding: 12px 16px;
+        }
+
+        .message-input {
+          font-size: 16px;
+          /* Prevents zoom on iOS */
+        }
+      }
+
+      @media (max-width: 480px) {
+        .message {
+          max-width: 90%;
+          padding: 10px 14px;
+        }
+
+        .messages-area {
+          padding: 12px;
+          gap: 8px;
+        }
+
+        .input-area {
+          padding: 10px 12px;
+        }
+
+        .input-container {
+          gap: 8px;
+        }
+
+        .send-button {
+          padding: 12px 16px;
+          min-width: 50px;
+        }
+      }
+
+      /* Scrollbar styling */
+      .messages-area::-webkit-scrollbar {
+        width: 6px;
+      }
+
+      .messages-area::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      .messages-area::-webkit-scrollbar-thumb {
+        background: #c7c7cc;
+        border-radius: 3px;
+      }
+
+      .messages-area::-webkit-scrollbar-thumb:hover {
+        background: #a8a8a8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="messages-area" id="messages">
+        <!-- Messages will be added here dynamically -->
+      </div>
+
+      <div class="input-area">
+        <form class="input-container" id="msgForm">
+          <textarea
+            class="message-input"
+            id="msgBox"
+            placeholder="Type a message..."
+            rows="1"
+          ></textarea>
+          <button type="submit" class="send-button" id="sendButton">
+            Send
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      const messagesArea = document.getElementById("messages")
+      const messageInput = document.getElementById("msgBox")
+      const sendButton = document.getElementById("sendButton")
+      const form = document.getElementById("msgForm")
+
+      // WebSocket connection
+      const ws = new WebSocket(`ws://${window.document.location.host}`)
+
+      // Receive messages from WebSocket
+      ws.onmessage = async function (message) {
+        const content = await message
+          .data
+          .text()
+        const contentData = JSON.parse(content)
+
+        // Create received message element
+        const messageDiv = document.createElement("div")
+        messageDiv.className = "message received"
+        const messageContent = document.createElement("div")
+        messageContent.className = "message-content"
+        messageContent.textContent = contentData
+          .text
+          messageDiv
+          .appendChild(messageContent)
+        const messageTime = document.createElement("div")
+        messageTime.className = "message-time"
+        messageTime.textContent = new Date(contentData.timestamp).toLocaleString()
+        messageDiv.appendChild(messageTime)
+
+        // Add to messages area
+        messagesArea.appendChild(messageDiv)
+
+        // Scroll to bottom
+        messagesArea.scrollTop = messagesArea.scrollHeight
+      }
+
+      // Auto-resize textarea
+      messageInput.addEventListener("input", function () {
+        this.style.height = "auto"
+        this.style.height = Math.min(this.scrollHeight, 120) + "px"
+      })
+
+      // Send message function
+      function sendMessage() {
+        const content = messageInput
+          .value
+          .trim()
+        if (!content || ws.readyState !== WebSocket.OPEN) 
+          return
+
+          // Send via WebSocket
+        ws.send(content)
+
+        // Clear input
+        messageInput.value = ""
+        messageInput.style.height = "auto"
+      }
+
+      // Form submission handler
+      form.addEventListener("submit", (event) => {
+        event.preventDefault()
+        sendMessage()
+      })
+
+      // Enter key to send (Shift+Enter for new line)
+      messageInput.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" && !e.shiftKey) {
+          e.preventDefault()
+          sendMessage()
+        }
+      })
+
+      // Initial scroll to bottom
+      messagesArea.scrollTop = messagesArea.scrollHeight
+    </script>
+  </body>
+</html>

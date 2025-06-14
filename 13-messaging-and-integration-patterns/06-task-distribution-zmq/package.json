@@ -1,0 +1,18 @@
+{
+  "name": "05-pubsub-redis-streams",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to run parallel tasks using a messaging pipeline and ZeroMQ",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "indexed-string-variation": "^2.1.0",
+    "zeromq": "^6.3.0"
+  }
+}
