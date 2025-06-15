@@ -1,0 +1,18 @@
+{
+  "name": "09-correlation-id",
+  "version": "1.0.0",
+  "description": "This sample demonstrates how to implement a request/reply pattern on top of a simple point-to-point one-way asynchronous channel.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "nanoid": "^5.1.5",
+    "amqplib": "^0.10.8"
+  }
+}
