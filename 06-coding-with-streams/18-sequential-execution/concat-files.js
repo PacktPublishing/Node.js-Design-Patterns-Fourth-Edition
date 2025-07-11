@@ -16,7 +16,10 @@ export function concatFiles(dest, files) {
           },
         })
       )
-      .on('error', reject)
+      .on('error', err => {
+        destStream.end()
+        reject(err)
+      })
       .on('finish', () => {
         destStream.end()
         resolve()
