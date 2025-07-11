@@ -1,12 +1,10 @@
 import { Transform } from 'node:stream'
 
-export class LimitedParallelStream extends Transform {
-  constructor(concurrency, userTransform, opts) {
+export class ConcurrentStream extends Transform {
+  constructor(userTransform, opts) {
     super({ objectMode: true, ...opts })
-    this.concurrency = concurrency
     this.userTransform = userTransform
     this.running = 0
-    this.continueCb = null
     this.terminateCb = null
   }
 
@@ -18,11 +16,7 @@ export class LimitedParallelStream extends Transform {
       this.push.bind(this),
       this._onComplete.bind(this)
     )
-    if (this.running < this.concurrency) {
-      done()
-    } else {
-      this.continueCb = done
-    }
+    done()
   }
 
   _flush(done) {
@@ -38,9 +32,6 @@ export class LimitedParallelStream extends Transform {
     if (err) {
       return this.emit('error', err)
     }
-    const tmpCb = this.continueCb
-    this.continueCb = null
-    tmpCb?.()
     if (this.running === 0) {
       this.terminateCb?.()
     }

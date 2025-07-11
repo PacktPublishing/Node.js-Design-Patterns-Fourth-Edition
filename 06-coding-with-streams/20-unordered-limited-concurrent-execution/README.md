@@ -1,6 +1,6 @@
-# 20-unordered-limited-parallel-execution
+# 20-unordered-limited-concurrent-execution
 
-This example shows how to create a limited parallel execution flow using
+This example shows how to create a limited concurrent execution flow using
 streams.
 
 ## Run

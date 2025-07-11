@@ -1,6 +1,6 @@
-# 21-ordered-parallel-execution
+# 21-ordered-limited-concurrent-execution
 
-This example shows how to create a limited parallel execution flow using
+This example shows how to create a limited concurrent execution flow using
 streams.
 
 ## Dependencies

@@ -1,13 +1,13 @@
 import { createReadStream, createWriteStream } from 'node:fs'
 import { createInterface } from 'node:readline'
 import { pipeline } from 'node:stream/promises'
-import { ParallelStream } from './parallel-stream.js'
+import { ConcurrentStream } from './concurrent-stream.js'
 
 const inputFile = createReadStream(process.argv[2])
 const fileLines = createInterface({
   input: inputFile,
 })
-const checkUrls = new ParallelStream(async (url, _enc, push, done) => {
+const checkUrls = new ConcurrentStream(async (url, _enc, push, done) => {
   if (!url) {
     return done()
   }

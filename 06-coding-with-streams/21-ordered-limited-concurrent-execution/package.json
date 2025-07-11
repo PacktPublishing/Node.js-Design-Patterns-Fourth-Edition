@@ -1,0 +1,17 @@
+{
+  "name": "21-ordered-limited-concurrent-execution",
+  "version": "1.0.0",
+  "description": "This example shows how to create a limited concurrent execution flow using streams.",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=24"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {
+    "parallel-transform": "^1.2.0"
+  }
+}

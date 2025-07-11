@@ -1,6 +1,6 @@
-# 19-unordered-parallel-execution
+# 19-unordered-concurrent-execution
 
-This example shows how to create a parallel execution flow using streams.
+This example shows how to create a concurrent execution flow using streams.
 
 ## Run
 

@@ -11,7 +11,11 @@ export function concatFiles(dest, files) {
           transform(filename, _enc, done) {
             const src = createReadStream(filename)
             src.pipe(destStream, { end: false })
+            // same as ((err) => done(err))
+            // propagates the error
             src.on('error', done)
+            // same as (() => done())
+            // propagates correct completion
             src.on('end', done)
           },
         })
