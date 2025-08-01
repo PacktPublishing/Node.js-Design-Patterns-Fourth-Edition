@@ -6,7 +6,7 @@ export class CheckUrls {
   async *[Symbol.asyncIterator]() {
     for (const url of this.urls) {
       try {
-        const checkResult = await await fetch(url, {
+        const checkResult = await fetch(url, {
           method: 'HEAD',
           redirect: 'follow',
           signal: AbortSignal.timeout(5000), // 5 secs timeout

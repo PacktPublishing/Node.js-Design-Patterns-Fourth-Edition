@@ -9,18 +9,23 @@ export class OnlineState {
   }
 
   async _tryFlush() {
-    let success = true
-    while (this.failsafeSocket.queue.length > 0) {
-      const data = this.failsafeSocket.queue[0]
-      const flushed = await this._tryWrite(data)
-      if (flushed) {
-        this.failsafeSocket.queue.shift()
-      } else {
-        success = false
-        break
+    try {
+      let success = true
+      while (this.failsafeSocket.queue.length > 0) {
+        const data = this.failsafeSocket.queue[0]
+        const flushed = await this._tryWrite(data)
+        if (flushed) {
+          this.failsafeSocket.queue.shift()
+        } else {
+          success = false
+          break
+        }
       }
-    }
-    if (!success) {
+      if (!success) {
+        this.failsafeSocket.changeState('offline')
+      }
+    } catch (err) {
+      console.error('Error during flush', err.message)
       this.failsafeSocket.changeState('offline')
     }
   }

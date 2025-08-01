@@ -13,7 +13,7 @@ export function createPostStatusCmd(service, status) {
       }
     },
     serialize() {
-      return { type: 'status', action: 'post', status: status }
+      return { type: 'status', action: 'post', status }
     },
   }
 }
