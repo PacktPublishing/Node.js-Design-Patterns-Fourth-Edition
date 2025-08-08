@@ -11,10 +11,7 @@ test('A user can sign up and book an event', async ({ page }) => {
 
   await page.goto('http://localhost:3000')
 
-  await page
-    .getByRole('navigation')
-    .getByRole('link', { name: 'Sign In' })
-    .click()
+  await page.getByRole('link', { name: 'Sign In' }).click()
 
   await page.getByRole('link', { name: 'Sign up' }).click()
 
@@ -23,13 +20,13 @@ test('A user can sign up and book an event', async ({ page }) => {
   const email = `test${seed}@example.com`
   const password = `someRandomPassword${seed}`
 
-  await page.locator('[name="name"]').fill(name)
-  await page.locator('[name="email"]').fill(email)
-  await page.locator('[name="password"]').fill(password)
+  await page.getByRole('textbox', { name: 'name' }).fill(name)
+  await page.getByRole('textbox', { name: 'email' }).fill(email)
+  await page.getByRole('textbox', { name: 'password' }).fill(password)
 
   await page.getByRole('button', { name: 'Create account' }).click()
 
-  await page.getByRole('heading', { name: 'Italian Cooking Workshop' }).click()
+  await page.getByRole('link', { name: 'Marathon City Run' }).click()
 
   // get the value of the current available capacity
   const availableCapacity = Number.parseInt(
@@ -38,21 +35,15 @@ test('A user can sign up and book an event', async ({ page }) => {
 
   await page.getByRole('button', { name: 'Reserve your spot' }).click()
 
-  await page.waitForResponse(
-    response =>
-      response.url().includes('/events/') &&
-      response.request().method() === 'POST' &&
-      response.status() === 200
-  )
-
   // check that the reservation was successful by looking that we have
   // a "Booked" note on the page and that
-  // the "reserve" button is now disabled
+  // the "reserve" button says "You have booked this event!" and is now disabled
   await expect(page.getByTestId('badge').first()).toHaveText('Booked')
-
-  expect(
-    await page.getByRole('button', { name: 'You have booked this event!' })
-  ).toBeDisabled()
+  const bookButton = await page.getByRole('button', {
+    name: 'You have booked this event!',
+  })
+  await expect(bookButton).toBeDisabled()
+  await expect(bookButton).toBeVisible()
 
   // check that the count of spots available went down
   const newAvailableCapacity = Number.parseInt(
@@ -60,18 +51,13 @@ test('A user can sign up and book an event', async ({ page }) => {
   )
   expect(newAvailableCapacity).toBeLessThan(availableCapacity)
 
-  await page
-    .getByRole('navigation')
-    .getByRole('link', { name: 'My Reservations' })
-    .click()
+  await page.getByRole('link', { name: 'My Reservations' }).click()
 
-  await page.waitForSelector('h1:has-text("My Reservations")', {
-    state: 'visible',
-  })
+  await expect(
+    page.getByRole('heading', { name: 'My Reservations' })
+  ).toBeVisible()
 
   expect(
-    await page
-      .getByRole('heading', { name: 'Italian Cooking Workshop' })
-      .isVisible()
-  ).toBeTruthy()
+    await page.getByRole('heading', { name: 'Marathon City Run' })
+  ).toBeVisible()
 })
