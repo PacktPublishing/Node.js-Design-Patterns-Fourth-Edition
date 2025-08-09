@@ -3,6 +3,10 @@ import { setTimeout } from 'node:timers/promises'
 const deactivate = Symbol('deactivate')
 
 class InitializedState {
+  constructor(db) {
+    this.db = db
+  }
+
   async query(queryString) {
     // simulate the delay of the query execution
     await setTimeout(100)
@@ -35,6 +39,9 @@ class QueuingState {
 }
 
 class Database {
+  connected = false
+  #pendingConnection = null
+
   constructor() {
     this.state = new QueuingState(this)
   }
@@ -45,12 +52,20 @@ class Database {
   }
 
   async connect() {
-    // simulate the delay of the connection
-    await setTimeout(500)
-    this.connected = true
-    const oldState = this.state
-    this.state = new InitializedState(this)
-    oldState[deactivate]?.()
+    if (!this.connected) {
+      if (this.#pendingConnection) {
+        return this.#pendingConnection
+      }
+      // simulate the delay of the connection
+      this.#pendingConnection = setTimeout(500)
+      await this.#pendingConnection
+      this.connected = true
+      this.#pendingConnection = null
+      // once connected update the state
+      const oldState = this.state
+      this.state = new InitializedState(this)
+      oldState[deactivate]?.()
+    }
   }
 }
 

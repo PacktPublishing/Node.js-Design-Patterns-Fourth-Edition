@@ -2,15 +2,24 @@ import { setTimeout } from 'node:timers/promises'
 
 class Database {
   connected = false
+  #pendingConnection = null
   commandsQueue = []
 
   async connect() {
-    // simulate the delay of the connection
-    await setTimeout(500)
-    this.connected = true
-    while (this.commandsQueue.length > 0) {
-      const command = this.commandsQueue.shift()
-      command()
+    if (!this.connected) {
+      if (this.#pendingConnection) {
+        return this.#pendingConnection
+      }
+      // simulate the delay of the connection
+      this.#pendingConnection = setTimeout(500)
+      await this.#pendingConnection
+      this.connected = true
+      this.#pendingConnection = null
+      // once connected executes all the queued commands
+      while (this.commandsQueue.length > 0) {
+        const command = this.commandsQueue.shift()
+        command()
+      }
     }
   }
 

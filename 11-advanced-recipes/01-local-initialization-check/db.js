@@ -2,12 +2,18 @@ import { setTimeout } from 'node:timers/promises'
 
 class Database {
   connected = false
+  #pendingConnection = null
 
   async connect() {
     if (!this.connected) {
+      if (this.#pendingConnection) {
+        return this.#pendingConnection
+      }
       // simulate the delay of the connection
-      await setTimeout(500)
+      this.#pendingConnection = setTimeout(500)
+      await this.#pendingConnection
       this.connected = true
+      this.#pendingConnection = null
     }
   }
 
