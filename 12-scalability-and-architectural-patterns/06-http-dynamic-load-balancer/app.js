@@ -24,9 +24,7 @@ async function registerService() {
     tags: [serviceType],
   })
 
-  console.log(
-    `${serviceType} registered successfully as ${serviceId} on ${address}:${port}`
-  )
+  console.log(`${serviceType} registered as ${serviceId} on ${address}:${port}`)
 }
 
 async function unregisterService(err) {
