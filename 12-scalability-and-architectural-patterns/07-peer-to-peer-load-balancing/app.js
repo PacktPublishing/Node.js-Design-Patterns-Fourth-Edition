@@ -5,7 +5,7 @@ const server = createServer((req, res) => {
   const url = new URL(req.url, `http://${req.headers.host}`)
   const searchParams = url.searchParams
 
-  console.log(`Handling request ${searchParams.get('request')} from ${pid}`)
+  console.log(`Request ${searchParams.get('request')} from ${pid}`)
   res.end(`Hello from ${pid}\n`)
 })
 
