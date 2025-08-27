@@ -1,6 +1,6 @@
-# Node.js-Design-Patterns-Fourth-Edition_published-by-Packt
+# Node.js Design Patterns, Fourth Edition
 
-Node.js Design Patterns, Fourth Edition_published by Packt
+Node.js Design Patterns, Fourth Edition, published by Packt
 
 The all the code examples in this repo are organised by chapter, for every
 chapter you'll have multiple examples, each one with its own README and
