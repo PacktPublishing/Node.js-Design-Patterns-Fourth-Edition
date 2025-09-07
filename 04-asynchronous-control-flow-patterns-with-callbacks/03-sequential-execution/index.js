@@ -21,6 +21,6 @@ function task3(cb) {
 }
 
 task1(() => {
-  // executed when task1, task2 and task3 are completed
-  console.log('tasks 1, 2 and 3 executed')
+  // executed when task1, task2, and task3 are completed
+  console.log('tasks 1, 2, and 3 executed')
 })
