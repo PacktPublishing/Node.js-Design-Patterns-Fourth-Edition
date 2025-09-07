@@ -11,5 +11,6 @@ To run the example launch:
 node index.js
 ```
 
-NOTE: Don't run `npm install` or the since this sample is composed of some fake
+> [!WARNING]  
+>  Don't run `npm install` (or `pnpm install` or `yarn install`) since this sample is composed of some fake
 dependencies which otherwise might be overwritten.
