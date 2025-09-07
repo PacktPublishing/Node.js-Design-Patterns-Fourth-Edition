@@ -1,7 +1,7 @@
 {
-  "name": "12-async-generator-check-urls",
+  "name": "14-async-iterator-utilities",
   "version": "1.0.0",
-  "description": "This sample demonstrates how to use an async generator to implement an async iterator",
+  "description": "This sample demonstrates how to use async iterator utilities such as `map` and `filter`",
   "type": "module",
   "scripts": {},
   "engines": {

@@ -1,12 +1,11 @@
-# 12-async-generator-check-urls
+# 14-async-iterator-utilities
 
-This sample demonstrates how to use an async generator to implement an async
-iterator.
+This sample demonstrates how to use async iterator utilities such as `map` and `filter`.
 
 ## Run
 
 To run the example launch:
 
-```
+```bash
 node index.js
 ```
