@@ -14,3 +14,9 @@ node index.js 2201307499
 NODE_ENV=production node index.js 2201307499
 ```
 
+or, if you are not using a Unix-like OS:
+
+```bash
+npx cross-env NODE_ENV=production node index.js 2201307499
+```
+
