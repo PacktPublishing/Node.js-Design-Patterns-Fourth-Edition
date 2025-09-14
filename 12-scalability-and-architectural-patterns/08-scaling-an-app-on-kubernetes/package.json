@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "This example demonstrates how to implement peer-to-peer load balancing",
   "type": "module",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js"
   },

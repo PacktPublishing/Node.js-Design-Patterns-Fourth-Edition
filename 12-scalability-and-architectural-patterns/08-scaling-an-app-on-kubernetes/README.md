@@ -94,3 +94,7 @@ You can finally stop minikube by running:
 ```bash
 minikube stop
 ```
+
+## Notes
+
+- If you are comparing the `package.json` here from what's in the book, keep in mind that the book has a simplfied version of the file to make it fit in the page and remove unnecessary distractions. Practically speaking, both files work the same, just some metadata is missing in the book version and some values in the repo are more verbose to stay consistent with the other examples.
