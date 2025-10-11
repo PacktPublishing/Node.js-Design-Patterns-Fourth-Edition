@@ -4,7 +4,7 @@ import { join } from 'node:path'
  * Utility script that scaffolds a new example in the book including a README.md, index.js and package.json
  *
  * Usage:
- *   node utils/create-example.js <chapter> <exampleName> <exampleDescription>
+ *   node scripts/create-example.js <chapter> <exampleName> <exampleDescription>
  */
 import { mkdirp } from 'mkdirp'
 
@@ -12,7 +12,7 @@ const [, , chapter, exampleName, exampleDescription] = process.argv
 
 if (!(chapter && exampleName && exampleDescription)) {
   console.error(
-    'Usage: node utils/create-example.js <chapter> <exampleName> <exampleDescription>'
+    'Usage: node scripts/create-example.js <chapter> <exampleName> <exampleDescription>'
   )
   process.exit(1)
 }
