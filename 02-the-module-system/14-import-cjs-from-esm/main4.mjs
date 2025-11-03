@@ -1,6 +1,6 @@
-import { createRequire } from 'node:module'
+import { createRequire } from "node:module";
 
-const require = createRequire(import.meta.url)
-const { someFeature } = require('./someModule.cjs')
+const require = createRequire(import.meta.url);
+const { someFeature } = require("./someModule.cjs");
 
-console.log(someFeature)
+console.log(someFeature);

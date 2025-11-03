@@ -4,15 +4,15 @@ export async function getActiveVouchers(db, userId) {
        WHERE userId = ? AND 
        balance > 0 AND
        expiresAt > strftime('%FT%T:%fZ', 'now')`,
-    [userId]
-  )
+    [userId],
+  );
 
-  return vouchers
+  return vouchers;
 }
 
 export async function canPayWithVouchers(db, userId, amount) {
-  const vouchers = await getActiveVouchers(db, userId)
-  const availableBalance = vouchers.reduce((acc, v) => acc + v.balance, 0)
+  const vouchers = await getActiveVouchers(db, userId);
+  const availableBalance = vouchers.reduce((acc, v) => acc + v.balance, 0);
 
-  return availableBalance >= amount
+  return availableBalance >= amount;
 }

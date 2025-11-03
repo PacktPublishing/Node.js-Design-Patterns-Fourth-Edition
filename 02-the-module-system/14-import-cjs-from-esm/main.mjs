@@ -1,3 +1,3 @@
-import someModule from './someModule.cjs'
+import someModule from "./someModule.cjs";
 
-console.log(someModule)
+console.log(someModule);

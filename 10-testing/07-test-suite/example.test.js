@@ -1,9 +1,9 @@
-import { suite, test } from 'node:test'
+import { suite, test } from "node:test";
 
-suite('Top level suite', { concurrency: true }, () => {
-  test('Test 1', () => {})
-  test('Test 2', () => {})
-})
+suite("Top level suite", { concurrency: true }, () => {
+  test("Test 1", () => {});
+  test("Test 2", () => {});
+});
 
 // Equivalent to:
 // import { describe, it } from 'node:test'

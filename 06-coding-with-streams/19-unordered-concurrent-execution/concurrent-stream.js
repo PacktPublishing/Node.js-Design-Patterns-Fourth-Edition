@@ -1,39 +1,39 @@
-import { Transform } from 'node:stream'
+import { Transform } from "node:stream";
 
 export class ConcurrentStream extends Transform {
   constructor(userTransform, opts) {
-    super({ objectMode: true, ...opts })
-    this.userTransform = userTransform
-    this.running = 0
-    this.terminateCb = null
+    super({ objectMode: true, ...opts });
+    this.userTransform = userTransform;
+    this.running = 0;
+    this.terminateCb = null;
   }
 
   _transform(chunk, enc, done) {
-    this.running++
+    this.running++;
     this.userTransform(
       chunk,
       enc,
       this.push.bind(this),
-      this._onComplete.bind(this)
-    )
-    done()
+      this._onComplete.bind(this),
+    );
+    done();
   }
 
   _flush(done) {
     if (this.running > 0) {
-      this.terminateCb = done
+      this.terminateCb = done;
     } else {
-      done()
+      done();
     }
   }
 
   _onComplete(err) {
-    this.running--
+    this.running--;
     if (err) {
-      return this.emit('error', err)
+      return this.emit("error", err);
     }
     if (this.running === 0) {
-      this.terminateCb?.()
+      this.terminateCb?.();
     }
   }
 }

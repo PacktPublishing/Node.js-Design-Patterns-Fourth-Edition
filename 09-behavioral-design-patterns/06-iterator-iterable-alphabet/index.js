@@ -1,23 +1,23 @@
-const A_CHAR_CODE = 'A'.charCodeAt(0) // 65
-const Z_CHAR_CODE = 'Z'.charCodeAt(0) // 90
+const A_CHAR_CODE = "A".charCodeAt(0); // 65
+const Z_CHAR_CODE = "Z".charCodeAt(0); // 90
 
 function createAlphabetIterableIterator() {
-  let currCode = A_CHAR_CODE
+  let currCode = A_CHAR_CODE;
 
   return {
     next() {
-      const currChar = String.fromCodePoint(currCode)
+      const currChar = String.fromCodePoint(currCode);
       if (currCode > Z_CHAR_CODE) {
-        return { done: true }
+        return { done: true };
       }
 
-      currCode++
-      return { value: currChar, done: false }
+      currCode++;
+      return { value: currChar, done: false };
     },
     [Symbol.iterator]() {
-      return this
+      return this;
     },
-  }
+  };
 }
 
 // // If you want to use the iterator API
@@ -30,9 +30,9 @@ function createAlphabetIterableIterator() {
 
 // Using the iterable API
 for (const letter of createAlphabetIterableIterator()) {
-  console.log(letter)
+  console.log(letter);
 }
 
 // or
-const letters = [...createAlphabetIterableIterator()]
-console.log(letters)
+const letters = [...createAlphabetIterableIterator()];
+console.log(letters);

@@ -1,13 +1,13 @@
-import { PassThrough } from 'node:stream'
+import { PassThrough } from "node:stream";
 
-let bytesWritten = 0
-const monitor = new PassThrough()
-monitor.on('data', chunk => {
-  bytesWritten += chunk.length
-})
-monitor.on('finish', () => {
-  console.log(`${bytesWritten} bytes written`)
-})
+let bytesWritten = 0;
+const monitor = new PassThrough();
+monitor.on("data", (chunk) => {
+  bytesWritten += chunk.length;
+});
+monitor.on("finish", () => {
+  console.log(`${bytesWritten} bytes written`);
+});
 
-monitor.write('Hello!')
-monitor.end()
+monitor.write("Hello!");
+monitor.end();

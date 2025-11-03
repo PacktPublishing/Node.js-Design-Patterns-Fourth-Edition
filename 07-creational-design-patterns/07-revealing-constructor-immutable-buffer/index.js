@@ -1,11 +1,11 @@
-import { ImmutableBuffer } from './immutableBuffer.js'
+import { ImmutableBuffer } from "./immutableBuffer.js";
 
-const hello = 'Hello!'
+const hello = "Hello!";
 const immutable = new ImmutableBuffer(hello.length, ({ write }) => {
-  write(hello)
-})
+  write(hello);
+});
 
-console.log(String.fromCharCode(immutable.readInt8(0)))
+console.log(String.fromCharCode(immutable.readInt8(0)));
 
 // the following line will throw
 // "TypeError: immutable.write is not a function"

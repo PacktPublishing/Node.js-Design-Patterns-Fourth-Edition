@@ -1,14 +1,14 @@
 export function createLoggingWritable(writable) {
   return new Proxy(writable, {
     get(target, propKey, _receiver) {
-      if (propKey === 'write') {
+      if (propKey === "write") {
         return (...args) => {
-          const [chunk] = args
-          console.log('Writing', chunk)
-          return writable.write(...args)
-        }
+          const [chunk] = args;
+          console.log("Writing", chunk);
+          return writable.write(...args);
+        };
       }
-      return target[propKey]
+      return target[propKey];
     },
-  })
+  });
 }

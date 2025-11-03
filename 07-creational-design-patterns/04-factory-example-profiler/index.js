@@ -1,22 +1,22 @@
-import { createProfiler } from './profiler.js'
+import { createProfiler } from "./profiler.js";
 
 function getAllFactors(n) {
-  let intNumber = n
-  const profiler = createProfiler(`Finding all factors of ${intNumber}`)
+  let intNumber = n;
+  const profiler = createProfiler(`Finding all factors of ${intNumber}`);
 
-  profiler.start()
-  const factors = []
+  profiler.start();
+  const factors = [];
   for (let factor = 2; factor <= intNumber; factor++) {
     while (intNumber % factor === 0) {
-      factors.push(factor)
-      intNumber /= factor
+      factors.push(factor);
+      intNumber /= factor;
     }
   }
-  profiler.end()
+  profiler.end();
 
-  return factors
+  return factors;
 }
 
-const myNumber = process.argv[2]
-const myFactors = getAllFactors(myNumber)
-console.log(`Factors of ${myNumber} are: `, myFactors)
+const myNumber = process.argv[2];
+const myFactors = getAllFactors(myNumber);
+console.log(`Factors of ${myNumber} are: `, myFactors);

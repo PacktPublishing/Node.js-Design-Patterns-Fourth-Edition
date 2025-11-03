@@ -1,3 +1,3 @@
-import { someFeature } from './someModule.cjs'
+import { someFeature } from "./someModule.cjs";
 
-console.log(someFeature)
+console.log(someFeature);

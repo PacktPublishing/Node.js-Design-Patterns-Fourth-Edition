@@ -1,39 +1,39 @@
-import { CancelError } from './cancelError.js'
+import { CancelError } from "./cancelError.js";
 
 export function createAsyncCancelable(generatorFunction) {
   return function asyncCancelable(...args) {
-    const generatorObject = generatorFunction(...args)
-    let cancelRequested = false
+    const generatorObject = generatorFunction(...args);
+    let cancelRequested = false;
 
     function cancel() {
-      cancelRequested = true
+      cancelRequested = true;
     }
 
     const promise = new Promise((resolve, reject) => {
       // biome-ignore lint/complexity/noExcessiveCognitiveComplexity: <explanation>
       async function nextStep(prevResult) {
         if (cancelRequested) {
-          return reject(new CancelError())
+          return reject(new CancelError());
         }
 
         if (prevResult.done) {
-          return resolve(prevResult.value)
+          return resolve(prevResult.value);
         }
 
         try {
-          nextStep(generatorObject.next(await prevResult.value))
+          nextStep(generatorObject.next(await prevResult.value));
         } catch (err) {
           try {
-            nextStep(generatorObject.throw(err))
+            nextStep(generatorObject.throw(err));
           } catch (err2) {
-            reject(err2)
+            reject(err2);
           }
         }
       }
 
-      nextStep({})
-    })
+      nextStep({});
+    });
 
-    return { promise, cancel }
-  }
+    return { promise, cancel };
+  };
 }

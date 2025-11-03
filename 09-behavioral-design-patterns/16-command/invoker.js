@@ -1,35 +1,35 @@
 // The Invoker
 export class Invoker {
-  #history = []
+  #history = [];
 
   run(cmd) {
-    this.#history.push(cmd)
-    cmd.run()
-    console.log('Command executed', cmd.serialize())
+    this.#history.push(cmd);
+    cmd.run();
+    console.log("Command executed", cmd.serialize());
   }
 
   delay(cmd, delay) {
     setTimeout(() => {
-      console.log('Executing delayed command', cmd.serialize())
-      this.run(cmd)
-    }, delay)
+      console.log("Executing delayed command", cmd.serialize());
+      this.run(cmd);
+    }, delay);
   }
 
   undo() {
-    const cmd = this.#history.pop()
+    const cmd = this.#history.pop();
     if (cmd) {
-      cmd.undo()
-      console.log('Command undone', cmd.serialize())
+      cmd.undo();
+      console.log("Command undone", cmd.serialize());
     }
   }
 
   async runRemotely(cmd) {
-    await fetch('http://localhost:3000/cmd', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    await fetch("http://localhost:3000/cmd", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(cmd.serialize()),
-    })
+    });
 
-    console.log('Command executed remotely', cmd.serialize())
+    console.log("Command executed remotely", cmd.serialize());
   }
 }

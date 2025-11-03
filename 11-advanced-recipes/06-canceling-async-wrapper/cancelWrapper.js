@@ -1,18 +1,18 @@
-import { CancelError } from './cancelError.js'
+import { CancelError } from "./cancelError.js";
 
 export function createCancelWrapper() {
-  let cancelRequested = false
+  let cancelRequested = false;
 
   function cancel() {
-    cancelRequested = true
+    cancelRequested = true;
   }
 
   function callIfNotCanceled(func, ...args) {
     if (cancelRequested) {
-      return Promise.reject(new CancelError())
+      return Promise.reject(new CancelError());
     }
-    return func(...args)
+    return func(...args);
   }
 
-  return { callIfNotCanceled, cancel }
+  return { callIfNotCanceled, cancel };
 }

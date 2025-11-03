@@ -1,11 +1,11 @@
-import { equal } from 'node:assert/strict'
-import { test } from 'node:test'
-import { calculateBasketTotal } from './calculateBasketTotal.js'
+import { equal } from "node:assert/strict";
+import { test } from "node:test";
+import { calculateBasketTotal } from "./calculateBasketTotal.js";
 
-test('Calculates basket total', { concurrency: true }, t => {
+test("Calculates basket total", { concurrency: true }, (t) => {
   const cases = [
     {
-      name: 'Empty basket',
+      name: "Empty basket",
       basket: { items: [] },
       expectedTotal: 0,
     },
@@ -25,16 +25,16 @@ test('Calculates basket total', { concurrency: true }, t => {
     //   },
     //   expectedTotal: 7,
     // },
-  ]
+  ];
 
   for (const { name, basket, expectedTotal } of cases) {
     t.test(name, () => {
-      const result = calculateBasketTotal(basket)
+      const result = calculateBasketTotal(basket);
       equal(
         result,
         expectedTotal,
-        `Expected total to be ${expectedTotal}, but got ${result}`
-      )
-    })
+        `Expected total to be ${expectedTotal}, but got ${result}`,
+      );
+    });
   }
-})
+});

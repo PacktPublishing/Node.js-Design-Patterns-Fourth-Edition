@@ -1,7 +1,7 @@
-'use strict'
+"use strict";
 
 function add(a, b) {
-  return a + b
+  return a + b;
 }
 
-module.exports = { add } // exports.add = add
+module.exports = { add }; // exports.add = add

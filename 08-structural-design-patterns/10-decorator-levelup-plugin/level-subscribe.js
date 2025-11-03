@@ -1,16 +1,16 @@
 export function levelSubscribe(db) {
   db.subscribe = (pattern, listener) => {
-    db.on('write', docs => {
+    db.on("write", (docs) => {
       for (const doc of docs) {
         const match = Object.keys(pattern).every(
-          k => pattern[k] === doc.value[k]
-        )
+          (k) => pattern[k] === doc.value[k],
+        );
         if (match) {
-          listener(doc.key, doc.value)
+          listener(doc.key, doc.value);
         }
       }
-    })
-  }
+    });
+  };
 
-  return db
+  return db;
 }

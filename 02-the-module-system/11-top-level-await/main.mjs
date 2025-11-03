@@ -1,3 +1,3 @@
-import { loadData } from './nobel.cjs'
+import { loadData } from "./nobel.cjs";
 
-console.log(await loadData())
+console.log(await loadData());

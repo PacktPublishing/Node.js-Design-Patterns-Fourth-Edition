@@ -1,13 +1,13 @@
 setImmediate(() => {
-  console.log('setImmediate(cb)')
-})
+  console.log("setImmediate(cb)");
+});
 
 setTimeout(() => {
-  console.log('setTimeout(cb, 0)')
-}, 0)
+  console.log("setTimeout(cb, 0)");
+}, 0);
 
 process.nextTick(() => {
-  console.log('process.nextTick(cb)')
-})
+  console.log("process.nextTick(cb)");
+});
 
-console.log('Sync operation')
+console.log("Sync operation");

@@ -5,7 +5,7 @@ export async function createTables(db) {
       name TEXT NOT NULL,
       totalSeats INTEGER NOT NULL
     )
-  `)
+  `);
 
   await db.query(`
     CREATE TABLE IF NOT EXISTS reservations (
@@ -14,5 +14,5 @@ export async function createTables(db) {
       userId TEXT NOT NULL,
       UNIQUE(eventId, userId)
     )
-  `)
+  `);
 }

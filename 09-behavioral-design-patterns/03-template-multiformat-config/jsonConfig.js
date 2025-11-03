@@ -1,11 +1,11 @@
-import { ConfigTemplate } from './configTemplate.js'
+import { ConfigTemplate } from "./configTemplate.js";
 
 export class JsonConfig extends ConfigTemplate {
   _deserialize(data) {
-    return JSON.parse(data)
+    return JSON.parse(data);
   }
 
   _serialize(data) {
-    return JSON.stringify(data, null, '  ')
+    return JSON.stringify(data, null, "  ");
   }
 }

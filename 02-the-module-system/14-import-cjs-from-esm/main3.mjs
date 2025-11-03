@@ -1,4 +1,4 @@
-import someModule from './someModule.cjs'
+import someModule from "./someModule.cjs";
 
-const { someFeature } = someModule
-console.log(someFeature)
+const { someFeature } = someModule;
+console.log(someFeature);

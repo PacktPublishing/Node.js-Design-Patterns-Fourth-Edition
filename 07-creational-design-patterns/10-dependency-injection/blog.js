@@ -1,6 +1,6 @@
 export class Blog {
   constructor(db) {
-    this.db = db
+    this.db = db;
   }
 
   initialize() {
@@ -9,22 +9,22 @@ export class Blog {
       title TEXT NOT NULL,
       content TEXT,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );`
+    );`;
 
-    return this.db.run(initQuery)
+    return this.db.run(initQuery);
   }
 
   createPost(id, title, content, createdAt) {
     return this.db.run(
-      'INSERT INTO posts VALUES (?, ?, ?, ?)',
+      "INSERT INTO posts VALUES (?, ?, ?, ?)",
       id,
       title,
       content,
-      createdAt
-    )
+      createdAt,
+    );
   }
 
   getAllPosts() {
-    return this.db.all('SELECT * FROM posts ORDER BY created_at DESC')
+    return this.db.all("SELECT * FROM posts ORDER BY created_at DESC");
   }
 }

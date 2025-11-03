@@ -1,4 +1,4 @@
-import { randomBytes } from 'node:crypto'
+import { randomBytes } from "node:crypto";
 
 function promisify(callbackBasedFn) {
   return function promisifiedFn(...args) {
@@ -7,18 +7,18 @@ function promisify(callbackBasedFn) {
         ...args,
         (err, result) => {
           if (err) {
-            return reject(err)
+            return reject(err);
           }
 
-          resolve(result)
+          resolve(result);
         },
-      ]
-      callbackBasedFn(...newArgs)
-    })
-  }
+      ];
+      callbackBasedFn(...newArgs);
+    });
+  };
 }
 
-const randomBytesP = promisify(randomBytes)
-randomBytesP(32).then(buffer => {
-  console.log(`Random bytes: ${buffer.toString()}`)
-})
+const randomBytesP = promisify(randomBytes);
+randomBytesP(32).then((buffer) => {
+  console.log(`Random bytes: ${buffer.toString()}`);
+});

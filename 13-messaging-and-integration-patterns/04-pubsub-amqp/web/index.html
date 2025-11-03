@@ -253,14 +253,14 @@
     <script>
       const messagesArea = document.getElementById("messages")
       const messageInput = document.getElementById("msgBox")
-      const sendButton = document.getElementById("sendButton")
+      const _sendButton = document.getElementById("sendButton")
       const form = document.getElementById("msgForm")
 
       // WebSocket connection
       const ws = new WebSocket(`ws://${window.document.location.host}`)
 
       // Receive messages from WebSocket
-      ws.onmessage = async function (message) {
+      ws.onmessage = async (message) => {
         const content = await message
           .data
           .text()
@@ -290,7 +290,7 @@
       // Auto-resize textarea
       messageInput.addEventListener("input", function () {
         this.style.height = "auto"
-        this.style.height = Math.min(this.scrollHeight, 120) + "px"
+        this.style.height = `${Math.min(this.scrollHeight, 120)}px`
       })
 
       // Send message function
@@ -316,7 +316,7 @@
       })
 
       // Enter key to send (Shift+Enter for new line)
-      messageInput.addEventListener("keydown", function (e) {
+      messageInput.addEventListener("keydown", (e) => {
         if (e.key === "Enter" && !e.shiftKey) {
           e.preventDefault()
           sendMessage()

@@ -1,35 +1,35 @@
-import { EventEmitter } from 'node:events'
+import { EventEmitter } from "node:events";
 
 export class TaskQueue extends EventEmitter {
   constructor(concurrency) {
-    super()
-    this.concurrency = concurrency
-    this.running = 0
-    this.queue = []
+    super();
+    this.concurrency = concurrency;
+    this.running = 0;
+    this.queue = [];
   }
 
   pushTask(task) {
-    this.queue.push(task)
-    process.nextTick(this.next.bind(this))
-    return this
+    this.queue.push(task);
+    process.nextTick(this.next.bind(this));
+    return this;
   }
 
   next() {
     if (this.running === 0 && this.queue.length === 0) {
-      return this.emit('empty')
+      return this.emit("empty");
     }
 
     while (this.running < this.concurrency && this.queue.length > 0) {
-      const task = this.queue.shift()
+      const task = this.queue.shift();
       task()
-        .catch(err => {
-          this.emit('taskError', err)
+        .catch((err) => {
+          this.emit("taskError", err);
         })
         .finally(() => {
-          this.running--
-          this.next()
-        })
-      this.running++
+          this.running--;
+          this.next();
+        });
+      this.running++;
     }
   }
 
@@ -37,6 +37,6 @@ export class TaskQueue extends EventEmitter {
     return {
       running: this.running,
       scheduled: this.queue.length,
-    }
+    };
   }
 }

@@ -1,5 +1,5 @@
-'use strict'
+"use strict";
 
-const data = require('./sample.json')
+const data = require("./sample.json");
 
-console.log(data)
+console.log(data);

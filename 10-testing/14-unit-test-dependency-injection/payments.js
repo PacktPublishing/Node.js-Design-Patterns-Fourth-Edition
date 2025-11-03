@@ -4,10 +4,10 @@ export async function canPayWithVouchers(db, userId, amount) {
        WHERE user_id = ? AND 
        balance > 0 AND
        expiresAt > NOW()`,
-    [userId]
-  )
+    [userId],
+  );
 
-  const availableBalance = vouchers.reduce((acc, v) => acc + v.balance, 0)
+  const availableBalance = vouchers.reduce((acc, v) => acc + v.balance, 0);
 
-  return availableBalance >= amount
+  return availableBalance >= amount;
 }

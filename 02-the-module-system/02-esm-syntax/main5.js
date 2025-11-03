@@ -1,7 +1,7 @@
 // avoid name clash
-import { log as log2 } from './logger.js'
+import { log as log2 } from "./logger.js";
 
-const log = console.log
+const log = console.log;
 
-log('message from log')
-log2('message from log2')
+log("message from log");
+log2("message from log2");

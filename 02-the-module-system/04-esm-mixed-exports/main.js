@@ -1,4 +1,4 @@
-import mylog, { info } from './logger.js'
+import mylog, { info } from "./logger.js";
 
-mylog('Hello')
-info('World')
+mylog("Hello");
+info("World");

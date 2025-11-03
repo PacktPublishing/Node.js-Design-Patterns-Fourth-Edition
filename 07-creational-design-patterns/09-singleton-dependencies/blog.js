@@ -1,4 +1,4 @@
-import { db } from './db.js'
+import { db } from "./db.js";
 
 export class Blog {
   initialize() {
@@ -7,22 +7,22 @@ export class Blog {
       title TEXT NOT NULL,
       content TEXT,
       created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-    );`
+    );`;
 
-    return db.run(initQuery)
+    return db.run(initQuery);
   }
 
   createPost(id, title, content, createdAt) {
     return db.run(
-      'INSERT INTO posts VALUES (?, ?, ?, ?)',
+      "INSERT INTO posts VALUES (?, ?, ?, ?)",
       id,
       title,
       content,
-      createdAt
-    )
+      createdAt,
+    );
   }
 
   getAllPosts() {
-    return db.all('SELECT * FROM posts ORDER BY created_at DESC')
+    return db.all("SELECT * FROM posts ORDER BY created_at DESC");
   }
 }

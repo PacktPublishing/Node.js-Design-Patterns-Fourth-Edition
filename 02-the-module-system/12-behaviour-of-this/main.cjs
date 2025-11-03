@@ -1,4 +1,4 @@
-'use strict'
+"use strict";
 
-console.log(this)
-console.log(globalThis)
+console.log(this);
+console.log(globalThis);

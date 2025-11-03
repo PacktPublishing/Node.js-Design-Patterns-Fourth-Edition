@@ -1,1 +1,1 @@
-export const someFeature = 'someFeature'
+export const someFeature = "someFeature";
