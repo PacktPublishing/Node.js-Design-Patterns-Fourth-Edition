@@ -1,0 +1,16 @@
+{
+  "name": "disk-bloat-finder",
+  "version": "1.0.0",
+  "description": "E.x. 3.5",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

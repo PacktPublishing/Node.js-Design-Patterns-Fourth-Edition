@@ -1,0 +1,16 @@
+{
+  "name": "download-to-file",
+  "version": "1.0.0",
+  "description": "Download to file utility based on download function sample",
+  "type": "module",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}

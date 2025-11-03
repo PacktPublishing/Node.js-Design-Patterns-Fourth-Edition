@@ -1,0 +1,16 @@
+{
+  "name": "modules-binding",
+  "version": "1.0.0",
+  "description": "CommonJS module binding test",
+  "type": "commonjs",
+  "scripts": {},
+  "engines": {
+    "node": ">=23"
+  },
+  "engineStrict": true,
+  "keywords": [],
+  "author": "Luciano Mammino and Mario Casciaro",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
+}
