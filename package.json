@@ -5,22 +5,28 @@
   "description": "Code samples for the book Node.js Design Patterns, 4th Edition by Mario Casciaro and Luciano Mammino",
   "scripts": {
     "test": "pnpm run test:lint",
-    "test:lint": "biome check --organize-imports-enabled=true --no-errors-on-unmatched",
-    "test:lint-fix": "biome check --organize-imports-enabled=true --fix",
+    "test:lint": "biome check",
+    "test:lint-fix": "biome check --write",
     "prepare": "husky"
   },
-  "keywords": ["node.js", "design patterns", "book", "code samples"],
+  "keywords": [
+    "node.js",
+    "design patterns",
+    "book",
+    "code samples"
+  ],
   "author": "Luciano Mammino and Mario Casciaro",
   "license": "MIT",
-  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
   "devDependencies": {
-    "@biomejs/biome": "1.9.3",
-    "@types/node": "^22.5.5",
-    "husky": "^9.1.4",
-    "lint-staged": "^15.2.9"
+    "@biomejs/biome": "2.3.3",
+    "@types/node": "^24.10.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.6"
   },
   "lint-staged": {
-    "*": ["pnpm run test:lint"]
+    "*": [
+      "pnpm run test:lint"
+    ]
   },
   "dependencies": {
     "mkdirp": "^3.0.1"
