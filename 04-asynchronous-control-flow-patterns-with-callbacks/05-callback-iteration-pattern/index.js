@@ -13,12 +13,12 @@ const tasks = [
   },
 ];
 
-function iterate(index) {
+function iterate(index, tasks, finalCallback) {
   if (index === tasks.length) {
-    return finish();
+    return finalCallback();
   }
   const task = tasks[index];
-  task(() => iterate(index + 1));
+  task(() => iterate(index + 1, tasks, finalCallback));
 }
 
 function finish() {
@@ -26,4 +26,8 @@ function finish() {
   console.log("All tasks executed");
 }
 
-iterate(0);
+function iterateSeries(collection, iteratorCallback, finalCallback) {
+  iteratorCallback(0, collection, finalCallback);
+}
+
+iterateSeries(tasks, iterate, finish);
