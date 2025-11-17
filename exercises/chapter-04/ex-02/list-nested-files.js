@@ -2,18 +2,22 @@ import { readdir, stat } from "node:fs";
 import { join } from "node:path";
 
 export function listNestedFiles(path, cb) {
+  getFileNames(path, [], cb);
+}
+
+function getFileNames(path, names, cb) {
   readdir(path, (err, files) => {
     if (err) {
       return cb(err);
     }
 
-    getFileNames(0, files, path, [], cb);
+    iterate(0, files, path, names, cb);
   });
 }
 
-function getFileNames(index, files, path, fileNames, cb) {
+function iterate(index, files, path, names, cb) {
   if (index === files.length) {
-    return process.nextTick(cb, null, fileNames);
+    return process.nextTick(cb, null, names);
   }
 
   const currPath = join(path, files[index]);
@@ -23,23 +27,17 @@ function getFileNames(index, files, path, fileNames, cb) {
       return cb(err);
     }
 
-    if (stats.isDirectory()) {
-      return iterateNestedDir(currPath, index, files, path, fileNames, cb);
+    if (stats.isFile()) {
+      names.push(currPath);
+      return iterate(index + 1, files, path, names, cb);
     }
 
-    fileNames.push(currPath);
+    getFileNames(currPath, names, (err) => {
+      if (err) {
+        return cb(err);
+      }
 
-    getFileNames(index + 1, files, path, fileNames, cb);
-  });
-}
-
-function iterateNestedDir(currPath, index, files, path, fileNames, cb) {
-  listNestedFiles(currPath, (err, nestedFiles) => {
-    if (err) {
-      return cb(err);
-    }
-
-    fileNames.push(...nestedFiles);
-    getFileNames(index + 1, files, path, fileNames, cb);
+      iterate(index + 1, files, path, names, cb);
+    });
   });
 }
