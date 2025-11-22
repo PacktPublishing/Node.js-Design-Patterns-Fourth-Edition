@@ -1,7 +1,7 @@
 import { EventEmitter } from "node:events";
 
 export class TaskQueue extends EventEmitter {
-  private queue = new Array<Task>();
+  private readonly queue = new Array<Task>();
   private running = 0;
 
   constructor(private readonly concurrency: number) {

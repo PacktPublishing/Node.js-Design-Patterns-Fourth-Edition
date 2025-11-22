@@ -21,6 +21,9 @@
       "style": {
         "useArrayLiterals": "off",
         "useImportType": "off"
+      },
+      "suspicious": {
+        "useIterableCallbackReturn": "off"
       }
     }
   },

@@ -6,19 +6,16 @@ export class RecursiveSearch {
   private readonly fileNames = new Array<string>();
 
   constructor(
+    private dir: string,
     private readonly keyword: string,
     private readonly queue: TaskQueue,
   ) {}
 
-  public find(
-    dir: string,
-    cb: (err: Error | null, fileNames?: Array<string>) => void,
-  ) {
+  public find(cb: (err: Error | null, fileNames?: Array<string>) => void) {
     this.queue.on("error", (err) => cb(err));
     this.queue.on("empty", () => cb(null, this.fileNames));
-
     this.queue.pushTask((queueCb) => {
-      this.getFiles(dir, queueCb);
+      this.getFiles(this.dir, queueCb);
     });
   }
 
