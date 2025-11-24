@@ -12,7 +12,7 @@ const recursiveSearch = new RecursiveSearch(dir, keyword, queue);
 recursiveSearch.find((err, fileNames) => {
   if (err) {
     console.error(err);
-    process.exit(1);
+    return process.exit(1);
   }
 
   console.table(fileNames);

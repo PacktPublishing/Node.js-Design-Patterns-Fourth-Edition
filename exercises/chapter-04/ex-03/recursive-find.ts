@@ -6,7 +6,7 @@ export class RecursiveSearch {
   private readonly fileNames = new Array<string>();
 
   constructor(
-    private dir: string,
+    private readonly dir: string,
     private readonly keyword: string,
     private readonly queue: TaskQueue,
   ) {}
