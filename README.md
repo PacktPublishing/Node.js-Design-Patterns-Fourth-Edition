@@ -1,3 +1,5 @@
+<p align='center'><a href='https://www.packtpub.com/en-us/unlock?step=1'><img src='https://static.packt-cdn.com/assets/images/packt+events/finalGH_design_redeem.png'/></a></p>
+
 <h1 align="center">
 Node.js Design Patterns, Fourth Edition</h1>
 <p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/nodejs-design-patterns-fourth-edition/9781803238944"> Node.js Design Patterns, Fourth Edition</a>, published by Packt.
